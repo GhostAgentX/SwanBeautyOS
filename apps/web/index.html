@@ -58,8 +58,21 @@
 
         <aside class="panel" aria-label="Makeup controls">
           <div class="panel-section">
-            <h2 class="section-title">Looks</h2>
-            <div id="looks" class="chips" role="group" aria-label="Preset looks"></div>
+            <div class="section-head">
+              <h2 class="section-title">Looks</h2>
+              <button id="save-look" class="link-btn" type="button">Save as my look</button>
+            </div>
+            <div id="looks" class="chips" role="group" aria-label="Looks"></div>
+
+            <form id="save-form" class="save-form" hidden>
+              <label class="visually-hidden" for="look-name">Look name</label>
+              <input id="look-name" type="text" maxlength="32" placeholder="Name this look" autocomplete="off" required />
+              <button class="btn btn-small btn-accent" type="submit">Save</button>
+              <button id="cancel-save" class="btn btn-small" type="button">Cancel</button>
+            </form>
+
+            <div id="look-meta" class="look-meta" aria-live="polite"></div>
+            <div id="look-intensity"></div>
           </div>
 
           <div class="panel-section">

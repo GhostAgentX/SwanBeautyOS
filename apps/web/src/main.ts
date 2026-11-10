@@ -1,15 +1,25 @@
 import "./style.css"
 import { TryOn, TryOnError } from "./ar"
+import { MAX_CUSTOM_LOOKS, loadCustomLooks, newLookId, saveCustomLooks } from "./lookStore"
 import {
   CATEGORIES,
-  LOOKS,
+  DEFAULT_LOOK_ID,
+  OCCASIONS,
+  PRESET_LOOKS,
   PRODUCTS,
   buildConfig,
+  defaultShade,
+  lookFromState,
+  lookPreviewColors,
+  matchesLook,
   productById,
+  shadeName,
   stateFromLook,
   type CategoryId,
+  type LookProfile,
   type MakeupState,
   type ProductId,
+  type Shade,
 } from "./makeup"
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T
@@ -28,13 +38,28 @@ const ui = {
   compare: $<HTMLButtonElement>("compare"),
   snap: $<HTMLButtonElement>("snap"),
   looks: $("looks"),
+  lookMeta: $("look-meta"),
+  lookIntensity: $("look-intensity"),
+  saveLook: $<HTMLButtonElement>("save-look"),
+  saveForm: $<HTMLFormElement>("save-form"),
+  lookName: $<HTMLInputElement>("look-name"),
+  cancelSave: $<HTMLButtonElement>("cancel-save"),
   tabs: $("tabs"),
   products: $("products"),
 }
 
-let state: MakeupState = stateFromLook(LOOKS.find((l) => l.id === "natural")!.spec)
-let activeLook: string | null = "natural"
+// ---------- App state ----------
+
+let customLooks: LookProfile[] = loadCustomLooks()
+const allLooks = () => [...PRESET_LOOKS, ...customLooks]
+const findLook = (id: string | null) => allLooks().find((l) => l.id === id) ?? null
+
+/** The look the user last picked. Edits keep it selected but mark it "Edited" until they reset or save. */
+let activeLookId: string | null = DEFAULT_LOOK_ID
+let state: MakeupState = stateFromLook(findLook(DEFAULT_LOOK_ID)!)
 let activeCategory: CategoryId = "lips"
+/** Which eyeshadow layer the swatches/finish/intensity controls edit. */
+const activeLayer: Partial<Record<ProductId, number>> = {}
 let comparing = false
 const tryOn = new TryOn(ui.stage)
 
@@ -104,23 +129,167 @@ ui.snap.addEventListener("click", async () => {
 
 window.addEventListener("pagehide", () => void tryOn.destroy())
 
+// ---------- Look actions ----------
+
+function applyLook(look: LookProfile) {
+  state = stateFromLook(look)
+  activeLookId = look.id
+  for (const k of Object.keys(activeLayer)) delete activeLayer[k as ProductId]
+  renderAll()
+  pushConfig()
+}
+
+function isEdited() {
+  const look = findLook(activeLookId)
+  return !look || !matchesLook(state, look)
+}
+
+/** Call after any manual change to the state. */
+function edited() {
+  renderLooks()
+  renderLookMeta()
+  renderTabs()
+  pushConfig()
+}
+
+function persist() {
+  if (!saveCustomLooks(customLooks)) {
+    ui.lookMeta.dataset.warning = "Couldn't save in this browser (storage is blocked). Your look works until you leave."
+  }
+}
+
+ui.saveLook.addEventListener("click", () => {
+  if (customLooks.length >= MAX_CUSTOM_LOOKS) {
+    ui.lookMeta.dataset.warning = `You can keep up to ${MAX_CUSTOM_LOOKS} looks. Delete one to save another.`
+    renderLookMeta()
+    return
+  }
+  show(ui.saveForm, true)
+  const base = findLook(activeLookId)
+  ui.lookName.value = base && !base.custom ? `My ${base.name}` : ""
+  ui.lookName.focus()
+  ui.lookName.select()
+})
+ui.cancelSave.addEventListener("click", () => show(ui.saveForm, false))
+ui.saveForm.addEventListener("submit", (e) => {
+  e.preventDefault()
+  const name = ui.lookName.value.trim()
+  if (!name) return
+  const look = lookFromState(state, { id: newLookId(), name })
+  customLooks = [...customLooks, look]
+  persist()
+  show(ui.saveForm, false)
+  applyLook(look)
+})
+
+function deleteLook(id: string) {
+  customLooks = customLooks.filter((l) => l.id !== id)
+  persist()
+  // Keep the face as-is; it simply stops being tied to the deleted look.
+  if (activeLookId === id) activeLookId = null
+  renderLooks()
+  renderLookMeta()
+}
+
 // ---------- Panel rendering ----------
 
+function lookChip(look: LookProfile) {
+  const wrap = document.createElement("div")
+  wrap.className = "chip-wrap"
+
+  const b = document.createElement("button")
+  b.type = "button"
+  b.className = "chip"
+  b.setAttribute("aria-pressed", String(activeLookId === look.id))
+  b.title = look.description
+  const dots = document.createElement("span")
+  dots.className = "chip-dots"
+  dots.setAttribute("aria-hidden", "true")
+  for (const c of lookPreviewColors(look)) {
+    const d = document.createElement("span")
+    d.style.background = c
+    dots.append(d)
+  }
+  if (dots.childElementCount) b.append(dots)
+  b.append(look.name)
+  b.addEventListener("click", () => applyLook(look))
+  wrap.append(b)
+
+  if (look.custom) {
+    const del = document.createElement("button")
+    del.type = "button"
+    del.className = "chip-delete"
+    del.setAttribute("aria-label", `Delete ${look.name}`)
+    del.textContent = "×"
+    del.addEventListener("click", () => deleteLook(look.id))
+    wrap.append(del)
+  }
+  return wrap
+}
+
 function renderLooks() {
-  ui.looks.replaceChildren(
-    ...LOOKS.map((look) => {
-      const b = document.createElement("button")
-      b.type = "button"
-      b.className = "chip"
-      b.textContent = look.label
-      b.setAttribute("aria-pressed", String(activeLook === look.id))
-      b.addEventListener("click", () => {
-        state = stateFromLook(look.spec)
-        activeLook = look.id
-        renderAll()
-        pushConfig()
-      })
-      return b
+  const nodes: HTMLElement[] = PRESET_LOOKS.map(lookChip)
+  if (customLooks.length) {
+    const sep = document.createElement("span")
+    sep.className = "chips-sep"
+    sep.textContent = "Mine"
+    nodes.push(sep, ...customLooks.map(lookChip))
+  }
+  ui.looks.replaceChildren(...nodes)
+  // On phones the row scrolls sideways; keep the selected look in view.
+  ui.looks.querySelector<HTMLElement>('.chip[aria-pressed="true"]')?.scrollIntoView({ block: "nearest", inline: "nearest" })
+}
+
+function renderLookMeta() {
+  const look = findLook(activeLookId)
+  const edited = isEdited()
+  const frag = document.createDocumentFragment()
+
+  const title = document.createElement("div")
+  title.className = "look-title"
+  const name = document.createElement("strong")
+  name.textContent = look ? look.name : "Custom"
+  title.append(name)
+  if (look) {
+    const tag = document.createElement("span")
+    tag.className = "tag"
+    tag.textContent = OCCASIONS[look.occasion]
+    title.append(tag)
+  }
+  if (look && edited) {
+    const badge = document.createElement("span")
+    badge.className = "tag tag-edited"
+    badge.textContent = "Edited"
+    const reset = document.createElement("button")
+    reset.type = "button"
+    reset.className = "link-btn"
+    reset.textContent = "Reset"
+    reset.addEventListener("click", () => applyLook(look))
+    title.append(badge, reset)
+  }
+  frag.append(title)
+
+  const desc = document.createElement("p")
+  desc.className = "look-desc"
+  desc.textContent = look ? look.description : "Your own mix. Save it to keep it."
+  frag.append(desc)
+
+  const warning = ui.lookMeta.dataset.warning
+  if (warning) {
+    const w = document.createElement("p")
+    w.className = "look-warning"
+    w.textContent = warning
+    frag.append(w)
+    delete ui.lookMeta.dataset.warning
+  }
+  ui.lookMeta.replaceChildren(frag)
+}
+
+function renderLookIntensity() {
+  ui.lookIntensity.replaceChildren(
+    slider("Look intensity", state.intensity, (v) => {
+      state.intensity = v
+      pushConfig()
     }),
   )
 }
@@ -154,14 +323,6 @@ function renderTabs() {
   ui.products.setAttribute("aria-labelledby", `tab-${activeCategory}`)
 }
 
-/** Any manual edit means we're no longer exactly on a preset look. */
-function edited() {
-  activeLook = null
-  renderLooks()
-  renderTabs()
-  pushConfig()
-}
-
 function slider(label: string, value: number, onInput: (v: number) => void) {
   const wrap = document.createElement("label")
   wrap.className = "field"
@@ -186,9 +347,66 @@ function slider(label: string, value: number, onInput: (v: number) => void) {
 
 const prettyFinish = (f: string) => f.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
 
+/** Layer selector for stackable products (eyeshadow): pick, add or remove a layer. */
+function layerControls(id: ProductId, layers: Shade[], current: number) {
+  const def = productById(id)
+  const row = document.createElement("div")
+  row.className = "layers"
+  row.setAttribute("role", "group")
+  row.setAttribute("aria-label", `${def.label} layers`)
+
+  layers.forEach((layer, i) => {
+    const b = document.createElement("button")
+    b.type = "button"
+    b.className = "layer"
+    b.setAttribute("aria-pressed", String(i === current))
+    b.setAttribute("aria-label", `Layer ${i + 1}: ${shadeName(id, layer.color)}, ${prettyFinish(layer.finish)}`)
+    const sw = document.createElement("span")
+    sw.className = "layer-swatch"
+    sw.style.background = layer.color
+    b.append(sw, `Layer ${i + 1}`)
+    b.addEventListener("click", () => {
+      activeLayer[id] = i
+      renderProducts()
+    })
+    row.append(b)
+  })
+
+  if (layers.length < def.maxLayers) {
+    const add = document.createElement("button")
+    add.type = "button"
+    add.className = "layer layer-add"
+    add.textContent = "+ Add layer"
+    add.addEventListener("click", () => {
+      layers.push(defaultShade(id, layers.length + 1))
+      activeLayer[id] = layers.length - 1
+      renderProducts()
+      edited()
+    })
+    row.append(add)
+  }
+  if (layers.length > 1) {
+    const rm = document.createElement("button")
+    rm.type = "button"
+    rm.className = "link-btn"
+    rm.textContent = `Remove layer ${current + 1}`
+    rm.addEventListener("click", () => {
+      layers.splice(current, 1)
+      activeLayer[id] = Math.max(0, current - 1)
+      renderProducts()
+      edited()
+    })
+    row.append(rm)
+  }
+  return row
+}
+
 function productCard(id: ProductId) {
   const def = productById(id)
   const p = state.products[id]
+  const layerIndex = Math.min(activeLayer[id] ?? 0, p.layers.length - 1)
+  const shade = p.layers[layerIndex]
+
   const card = document.createElement("div")
   card.className = "card"
   card.dataset.enabled = String(p.enabled)
@@ -215,32 +433,33 @@ function productCard(id: ProductId) {
   const body = document.createElement("div")
   body.className = "card-body"
 
+  if (p.enabled && def.maxLayers > 1) body.append(layerControls(id, p.layers, layerIndex))
+
   const swatches = document.createElement("div")
   swatches.className = "swatches"
   swatches.role = "radiogroup"
   swatches.setAttribute("aria-label", `${def.label} shade`)
-  for (const shade of def.shades) {
-    const s = document.createElement("button")
-    s.type = "button"
-    s.className = "swatch"
-    s.role = "radio"
-    s.style.setProperty("--swatch", shade.hex)
-    s.title = shade.name
-    s.setAttribute("aria-label", shade.name)
-    s.setAttribute("aria-checked", String(p.enabled && p.color.toLowerCase() === shade.hex))
-    s.addEventListener("click", () => {
-      p.color = shade.hex
+  for (const s of def.shades) {
+    const b = document.createElement("button")
+    b.type = "button"
+    b.className = "swatch"
+    b.role = "radio"
+    b.style.setProperty("--swatch", s.hex)
+    b.title = s.name
+    b.setAttribute("aria-label", s.name)
+    b.setAttribute("aria-checked", String(p.enabled && shade.color.toLowerCase() === s.hex))
+    b.addEventListener("click", () => {
+      shade.color = s.hex
       p.enabled = true
       renderProducts()
       edited()
     })
-    swatches.append(s)
+    swatches.append(b)
   }
-  const shadeName = document.createElement("p")
-  shadeName.className = "shade-name"
-  shadeName.textContent = def.shades.find((s) => s.hex === p.color.toLowerCase())?.name ?? p.color
-
-  body.append(swatches, shadeName)
+  const nameEl = document.createElement("p")
+  nameEl.className = "shade-name"
+  nameEl.textContent = shadeName(id, shade.color)
+  body.append(swatches, nameEl)
 
   if (p.enabled) {
     if (def.finishes.length > 1) {
@@ -250,17 +469,18 @@ function productCard(id: ProductId) {
       lab.className = "field-label"
       lab.textContent = "Finish"
       const select = document.createElement("select")
-      for (const f of def.finishes) select.append(new Option(prettyFinish(f), f, false, f === p.finish))
+      for (const f of def.finishes) select.append(new Option(prettyFinish(f), f, false, f === shade.finish))
       select.addEventListener("change", () => {
-        p.finish = select.value
+        shade.finish = select.value
+        if (def.maxLayers > 1) renderProducts()
         edited()
       })
       field.append(lab, select)
       body.append(field)
     }
     body.append(
-      slider("Intensity", p.coverage, (v) => {
-        p.coverage = v
+      slider("Intensity", shade.coverage, (v) => {
+        shade.coverage = v
         edited()
       }),
     )
@@ -295,6 +515,8 @@ function renderProducts() {
 
 function renderAll() {
   renderLooks()
+  renderLookMeta()
+  renderLookIntensity()
   renderTabs()
   renderProducts()
 }

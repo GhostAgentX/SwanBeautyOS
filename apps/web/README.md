@@ -27,7 +27,39 @@ Live virtual makeup in the browser, built on the Banuba Face AR Web SDK (`@banub
 | `src/makeup.ts` | Product catalog, shades, looks, and `buildConfig()`, which turns the UI state into a [makeup prefab config](https://docs.banuba.com/far-sdk/effects/prefabs/makeup). |
 | `src/main.ts` | UI rendering and event wiring. |
 
-To change the catalog, edit `PRODUCTS` and `LOOKS` in `src/makeup.ts`. Shades are hex colors. Finishes must come from the documented list for each region.
+| `src/lookStore.ts` | Saves custom looks in the browser's `localStorage`; checks them on load. |
+
+## Looks
+
+A look is a `LookProfile` in `src/makeup.ts`: a name, description and occasion, a skin-smoothing level, and a recipe of products. Each product is one `Shade` (`{ color, finish, coverage }`). Eyeshadow can instead be an array of up to 3 layers, applied in order.
+
+```ts
+{
+  id: "sunset-bronze", name: "Sunset Bronze", occasion: "everyday", smoothing: 0.5,
+  description: "Three-layer gold-bronze lids, metallic bronze liner and a satin coral lip.",
+  products: {
+    eyeshadow: [
+      { color: "#d9b99b", finish: "matte",    coverage: 0.45 }, // base
+      { color: "#8c5a32", finish: "shimmer",  coverage: 0.5 },  // crease
+      { color: "#c9a24a", finish: "metallic", coverage: 0.45 }, // lid
+    ],
+    eyeliner: { color: "#7a4b25", finish: "metallic", coverage: 0.8 },
+    lipstick: { color: "#e8705a", finish: "satin",    coverage: 0.7 },
+    blush:    { color: "#c46a4f", finish: "matte",    coverage: 0.4 },
+  },
+}
+```
+
+- **To add a preset,** append it to `PRESET_LOOKS`. The UI picks it up, and `npm test` checks every finish, color and layer count against the catalog.
+- **Picking a look** copies it into editable state. Edits mark it **Edited**, with a **Reset** button. **Look intensity** scales every product at once and doesn't count as an edit.
+- **Save as my look** stores the current state as a custom look. It's kept in this browser only; replace `lookStore.ts` with an API client to sync looks to accounts.
+- **To change the catalog,** edit `PRODUCTS`. Finishes must come from Banuba's documented list for each region.
+
+## Tests
+
+```bash
+npm test
+```
 
 ## Notes
 - The token is compiled into the client bundle, as with any Web SDK token. Restrict it to your domains through Banuba.
