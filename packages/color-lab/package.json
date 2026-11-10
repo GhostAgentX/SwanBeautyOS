@@ -1,0 +1,21 @@
+{
+  "name": "@beautyos/color-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Beauty OS Digital Lab core: color science, color libraries (ASE/CSV), swatch analysis, skin tone reasoning and look formulation.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "@beautyos/look-format": "*"
+  }
+}

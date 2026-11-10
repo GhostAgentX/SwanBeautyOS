@@ -1,13 +1,19 @@
-# Swan Beauty OS
+# Beauty OS
 
-Beauty platform powered by Banuba Face AR, Video Editor and Photo Editor SDKs, with Banuba's AI skills preinstalled for Claude Code.
+Multi-brand AR beauty platform by Entelus. **AR Design** is the production studio where creative teams author makeup looks, synthetic models and media; the **try-on** brings published looks to customers on the web, standalone or embedded. Swan Beauty is the first brand.
 
-## Getting started
-1. Clone the repo and open it in Claude Code. The Banuba skills load automatically from `.claude/skills/`.
-2. `cp .env.example .env` and add your Banuba license token (request one from sales@banuba.com).
-3. Scaffold your first app, e.g.:
-   ```
-   /far-general Build an AR makeup try-on web app in apps/web
-   ```
+- **Look editor:** live AR preview on camera, photos, videos or synthetic models; layered makeup tied to catalog SKUs; image/video effects; autosave, publish, version history.
+- **Lab:** formulate looks from a description, from color chips and swatches (RGB, CMYK, Lab, imported Pantone/brand libraries), and from skin-tone analysis, with the reasoning shown.
+- **Models:** diverse, original synthetic casts with generous headroom; looks applied by the real AR engine.
+- **Assets:** image/video pipeline with enhancement, and export to any format, size, aspect ratio, DPI or color space.
+- **Portable:** looks export as Beauty OS JSON, Banuba effects, or bundles for other AR platforms.
 
-See `docs/banuba-skills.md` for the available commands and how to update them.
+```bash
+npm install
+cp .env.example .env        # add BANUBA_CLIENT_TOKEN
+npm run db:seed
+npm run dev:design          # http://localhost:3000
+npm run dev:tryon           # http://localhost:5173
+```
+
+Read **[docs/architecture.md](docs/architecture.md)** for the system design, extension points and deployment. Banuba's AI skills for Claude Code are bundled in `.claude/skills/` (see [docs/banuba-skills.md](docs/banuba-skills.md)).

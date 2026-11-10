@@ -1,9 +1,6 @@
 # apps/
 
-Each client app for Swan Beauty OS lives in its own folder here, for example:
+- `ar-design/`: Beauty OS AR Design, the production studio (Next.js)
+- `tryon/`: customer-facing try-on (Vite), embeddable via iframe
 
-- `apps/web`: browser try-on (Banuba Face AR Web SDK)
-- `apps/mobile`: iOS/Android app (native, Flutter or React Native)
-
-Ask Claude Code to scaffold one with the bundled skills, e.g.
-`/far-general Build an AR makeup try-on web app in apps/web`.
+See `../docs/architecture.md`.

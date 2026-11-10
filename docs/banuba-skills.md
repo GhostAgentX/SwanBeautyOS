@@ -21,4 +21,5 @@ Source: https://github.com/Banuba/ai-skills (commit in `.claude/skills/.banuba-s
 The skills warn when they are more than 6 weeks old. As of 2026-11-10 the bundle (v0.8.0, Aug 2026) is the latest Banuba has published.
 
 ## Apps built with the skills
-- `apps/web`: AR makeup try-on (Face AR Web SDK). See `apps/web/README.md`.
+- `apps/tryon`: customer try-on (Face AR Web SDK). See `apps/tryon/README.md`.
+- `apps/ar-design`: AR Design studio; its live preview uses the same engine (`packages/tryon-engine`).

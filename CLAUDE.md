@@ -1,12 +1,18 @@
-# Swan Beauty OS
+# Beauty OS
 
-Beauty platform built on Banuba SDKs (Face AR for makeup try-on and beautification; Video/Photo Editor for content).
+Multi-brand AR beauty platform (by Entelus). Swan Beauty is the first brand. Architecture: `docs/architecture.md`.
 
 ## Layout
-- `apps/`: one folder per client app (e.g. `apps/web`, `apps/mobile`)
-- `docs/`: project docs; see `docs/banuba-skills.md`
-- `.claude/skills/`: vendored Banuba skills with offline SDK docs (do not edit by hand; use `scripts/update-banuba-skills.sh`)
+- `packages/look-format`: Beauty OS Look Document, validation, AR platform adapters
+- `packages/tryon-engine`: Banuba player shared by both apps
+- `packages/color-lab`: color science, libraries, swatch analysis, skin tone, formulation
+- `apps/ar-design`: production studio (Next.js 16 + Drizzle/Postgres). Read `apps/ar-design/AGENTS.md` before changing Next.js code.
+- `apps/tryon`: customer try-on (Vite)
+- `.claude/skills/`: vendored Banuba skills (update with `scripts/update-banuba-skills.sh`)
 
 ## Rules
-- Use the Banuba skills (`/far-general`, `/build-video-editor`, `/build-photo-editor`) for SDK work, and their bundled docs before web lookups.
-- The Banuba license token comes from `BANUBA_CLIENT_TOKEN` in `.env`. Never hardcode or commit it.
+- Use the Banuba skills (`/far-general`, `/build-video-editor`, `/build-photo-editor`) and their bundled docs for SDK work.
+- Secrets come from the repo-root `.env` (see `.env.example`). Never hardcode or commit them.
+- New capabilities plug into the module registry (`apps/ar-design/src/modules`) or `registerAdapter()`; don't call concrete modules directly.
+- Schema changes: edit `apps/ar-design/src/db/schema.ts`, then `npm run db:generate -w @beautyos/ar-design`. Never edit released migrations.
+- Run `npm test` and `npm run typecheck` before committing.

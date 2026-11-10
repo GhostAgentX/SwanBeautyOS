@@ -1,0 +1,26 @@
+{
+  "name": "@beautyos/tryon",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "description": "Customer-facing AR makeup try-on. Loads a brand's published looks from the AR Design public API; embeddable via iframe.",
+  "scripts": {
+    "assets": "beautyos-copy-banuba-assets public/banuba",
+    "predev": "npm run assets",
+    "prebuild": "npm run assets",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@beautyos/look-format": "*",
+    "@beautyos/tryon-engine": "*"
+  },
+  "devDependencies": {
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  }
+}

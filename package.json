@@ -1,0 +1,16 @@
+{
+  "name": "beauty-os",
+  "private": true,
+  "description": "Beauty OS: multi-brand AR beauty platform by Entelus, with the AR Design studio (Swan Beauty is the first brand).",
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "dev:design": "npm run dev -w @beautyos/ar-design",
+    "dev:tryon": "npm run dev -w @beautyos/tryon",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "db:migrate": "npm run db:migrate -w @beautyos/ar-design",
+    "db:seed": "npm run db:seed -w @beautyos/ar-design"
+  },
+  "engines": { "node": ">=20" }
+}
