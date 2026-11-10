@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VideoRecorderDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/VideoRecorderDelegate" class="dashAnchor"></a>
+    <a title="VideoRecorderDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        VideoRecorderDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BanubaSdkManager.html">BanubaSdkManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseEffectPlayerView.html">BaseEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Camera.html">Camera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraDevice.html">CameraDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraPhotoSettings.html">CameraPhotoSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerView.html">EffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Frame.html">Frame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MetalTextureCache.html">MetalTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MulticastDelegate.html">MulticastDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OGLTextureCache.html">OGLTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLEffectPlayerView.html">OpenGLEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLLayer.html">OpenGLLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputConfiguration.html">OutputConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputSettings.html">OutputSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Photo.html">Photo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBuffer.html">PixelBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV.html">PixelBufferYUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV/PixelFormat.html">– PixelFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player.html">Player</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player/RenderMode.html">– RenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderTarget.html">RenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderedFrame.html">RenderedFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stream.html">Stream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextureCache.html">TextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Video.html">Video</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoExportHelper.html">VideoExportHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoRecorder.html">VideoRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkDrawSettings.html">WatermarkDrawSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkInfo.html">WatermarkInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CameraSessionType.html">CameraSessionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Orientation.html">Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VideoRecordingState.html">VideoRecordingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WatermarkCornerPosition.html">WatermarkCornerPosition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAssetTrack.html">AVAssetTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/BNBFrameData.html">BNBFrameData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGAffineTransform.html">CGAffineTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CIImage.html">CIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/InputService.html">InputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OutputService.html">OutputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITouch.html">UITouch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2peoiyyAA17MulticastDelegateCyxG_xtRlzClF">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2seoiyyAA17MulticastDelegateCyxG_xtRlzClF">-=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Attachable.html">Attachable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AudioCapturing.html">AudioCapturing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BanubaSdkManagerDelegate.html">BanubaSdkManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceAudioDelegate.html">CameraDeviceAudioDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceVideoDelegate.html">CameraDeviceVideoDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraServicing.html">CameraServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraZoomable.html">CameraZoomable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FramePresentable.html">FramePresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InputServiceDelegate.html">InputServiceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:@M@BanubaSdk@objc(pl)InputServicing">InputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OffscreenPresenting.html">OffscreenPresenting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OutputServicing.html">OutputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoRecorderDelegate.html">VideoRecorderDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk21OffscreenRenderTargeta">OffscreenRenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk20RotateCameraCallBacka">RotateCameraCallBack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>VideoRecorderDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">VideoRecorderDelegate</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(pl)VideoRecorderDelegate(im)onRecorderStateChanged:"></a>
+                    <a name="//apple_ref/swift/Method/onRecorderStateChanged(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(pl)VideoRecorderDelegate(im)onRecorderStateChanged:">onRecorderStateChanged(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">onRecorderStateChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/VideoRecordingState.html">VideoRecordingState</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(pl)VideoRecorderDelegate(im)onRecordingFinishedWithSuccess:error:"></a>
+                    <a name="//apple_ref/swift/Method/onRecordingFinished(success:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(pl)VideoRecorderDelegate(im)onRecordingFinishedWithSuccess:error:">onRecordingFinished(success:<wbr>error:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">onRecordingFinished</span><span class="p">(</span><span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(pl)VideoRecorderDelegate(im)onRecordingProgressWithDuration:"></a>
+                    <a name="//apple_ref/swift/Method/onRecordingProgress(duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(pl)VideoRecorderDelegate(im)onRecordingProgressWithDuration:">onRecordingProgress(duration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">onRecordingProgress</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2026 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-06-25)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

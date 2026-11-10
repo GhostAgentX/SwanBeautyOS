@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['id_0',['id',['../classbnb_1_1interfaces_1_1feature.html#a21f6ff4b4ce8b0c42cdcfb9084a6b047',1,'bnb::interfaces::feature']]],
+  ['identified_5fclass_1',['identified_class',['../classbnb_1_1identified__class.html',1,'bnb']]],
+  ['identified_5fclass_3c_20event_5fid_5ft_2c_20effect_5fevent_20_3e_2',['identified_class&lt; event_id_t, effect_event &gt;',['../classbnb_1_1identified__class.html',1,'bnb']]],
+  ['identified_5fclass_3c_20event_5fid_5ft_2c_20empty_5fevent_3c_20count_20_3e_20_3e_3',['identified_class&lt; event_id_t, empty_event&lt; Count &gt; &gt;',['../classbnb_1_1identified__class.html',1,'bnb']]],
+  ['identified_5fclass_3c_20event_5fid_5ft_2c_20event_20_3e_4',['identified_class&lt; event_id_t, Event &gt;',['../classbnb_1_1identified__class.html',1,'bnb']]],
+  ['identified_5fclass_3c_20event_5fid_5ft_2c_20full_5fimage_5ft_20_3e_5',['identified_class&lt; event_id_t, full_image_t &gt;',['../classbnb_1_1identified__class.html',1,'bnb']]],
+  ['identified_5fclass_3c_20event_5fid_5ft_2c_20simple_5fevent_3c_20t_2c_20count_20_3e_20_3e_6',['identified_class&lt; event_id_t, simple_event&lt; T, Count &gt; &gt;',['../classbnb_1_1identified__class.html',1,'bnb']]],
+  ['identified_5fclass_3c_20event_5fid_5ft_2c_20t_20_3e_7',['identified_class&lt; event_id_t, T &gt;',['../classbnb_1_1identified__class.html',1,'bnb']]],
+  ['image_5fbasis_8',['image_basis',['../classbnb_1_1full__image__t.html#ac4bc09a9180f3234014ac11b53e0fdaf',1,'bnb::full_image_t']]],
+  ['image_5fformat_9',['image_format',['../structbnb_1_1image__format.html',1,'bnb::image_format'],['../structbnb_1_1image__format.html#a661841cba6a164faa237f0588e57e71f',1,'bnb::image_format::image_format()=default'],['../structbnb_1_1image__format.html#a804f35df006687fe7e461f636529e4d7',1,'bnb::image_format::image_format(uint32_t width, uint32_t height, camera_orientation orientation, bool require_mirroring, int face_orientation, std::optional&lt; float &gt; fov=std::nullopt)']]],
+  ['image_5freleaser_10',['image_releaser',['../classbnb_1_1interfaces_1_1image__releaser.html',1,'bnb::interfaces']]],
+  ['image_5freleaser_2ehpp_11',['image_releaser.hpp',['../image__releaser_8hpp.html',1,'']]],
+  ['inactive_12',['inactive',['../effect__player__playback__state_8hpp.html#a740d49426be807a489cce98ac1a6b971a19d3894f53ce79c3f836f26cf8a3be3b',1,'bnb::interfaces']]],
+  ['informer_13',['informer',['../classbnb_1_1interfaces_1_1informer.html',1,'bnb::interfaces']]],
+  ['informer_2ehpp_14',['informer.hpp',['../informer_8hpp.html',1,'']]],
+  ['input_15',['input',['../classbnb_1_1player__api_1_1interfaces_1_1input.html',1,'bnb::player_api::interfaces']]],
+  ['input_5fmanager_16',['input_manager',['../classbnb_1_1interfaces_1_1input__manager.html',1,'bnb::interfaces']]],
+  ['input_5fmanager_2ehpp_17',['input_manager.hpp',['../input__manager_8hpp.html',1,'']]],
+  ['input_5fpixels_5fbase_18',['input_pixels_base',['../classbnb_1_1player__api_1_1input__pixels__base.html',1,'bnb::player_api']]],
+  ['instance_19',['instance',['../classbnb_1_1interfaces_1_1license__manager.html#af39fc7da362cb3bdc57bde21658b4ffd',1,'bnb::interfaces::license_manager']]],
+  ['inverse_20',['inverse',['../classbnb_1_1transformation.html#a6349258c50e36a37c65e17b7bb6ce185',1,'bnb::transformation']]],
+  ['inverse_5fj_21',['inverse_j',['../classbnb_1_1interfaces_1_1transformation.html#aaca4e4e87a836a74853626ce5b34be3e',1,'bnb::interfaces::transformation::inverse_j()'],['../classbnb_1_1transformation.html#ad3ae2715658949fda107bc00bced5274',1,'bnb::transformation::inverse_j() const override']]],
+  ['is_5faffine_22',['is_affine',['../classbnb_1_1transformation.html#abb08f29e686b87b1968045f83b54434e',1,'bnb::transformation']]],
+  ['is_5fexpired_23',['is_expired',['../classbnb_1_1interfaces_1_1license__manager.html#a43ae74d97f96b6e2c3bf65a79e539471',1,'bnb::interfaces::license_manager']]],
+  ['is_5flandscape_24',['is_landscape',['../classbnb_1_1full__image__t.html#ac1c8f7334599a8d81e163039bb2a78b0',1,'bnb::full_image_t']]]
+];

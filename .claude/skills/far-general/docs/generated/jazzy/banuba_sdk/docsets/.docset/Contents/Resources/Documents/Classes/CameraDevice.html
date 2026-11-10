@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CameraDevice Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CameraDevice" class="dashAnchor"></a>
+    <a title="CameraDevice Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        CameraDevice Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BanubaSdkManager.html">BanubaSdkManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseEffectPlayerView.html">BaseEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Camera.html">Camera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraDevice.html">CameraDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraPhotoSettings.html">CameraPhotoSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerView.html">EffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Frame.html">Frame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MetalTextureCache.html">MetalTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MulticastDelegate.html">MulticastDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OGLTextureCache.html">OGLTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLEffectPlayerView.html">OpenGLEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLLayer.html">OpenGLLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputConfiguration.html">OutputConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputSettings.html">OutputSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Photo.html">Photo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBuffer.html">PixelBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV.html">PixelBufferYUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV/PixelFormat.html">– PixelFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player.html">Player</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player/RenderMode.html">– RenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderTarget.html">RenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderedFrame.html">RenderedFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stream.html">Stream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextureCache.html">TextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Video.html">Video</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoExportHelper.html">VideoExportHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoRecorder.html">VideoRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkDrawSettings.html">WatermarkDrawSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkInfo.html">WatermarkInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CameraSessionType.html">CameraSessionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Orientation.html">Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VideoRecordingState.html">VideoRecordingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WatermarkCornerPosition.html">WatermarkCornerPosition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAssetTrack.html">AVAssetTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/BNBFrameData.html">BNBFrameData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGAffineTransform.html">CGAffineTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CIImage.html">CIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/InputService.html">InputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OutputService.html">OutputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITouch.html">UITouch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2peoiyyAA17MulticastDelegateCyxG_xtRlzClF">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2seoiyyAA17MulticastDelegateCyxG_xtRlzClF">-=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Attachable.html">Attachable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AudioCapturing.html">AudioCapturing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BanubaSdkManagerDelegate.html">BanubaSdkManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceAudioDelegate.html">CameraDeviceAudioDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceVideoDelegate.html">CameraDeviceVideoDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraServicing.html">CameraServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraZoomable.html">CameraZoomable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FramePresentable.html">FramePresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InputServiceDelegate.html">InputServiceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:@M@BanubaSdk@objc(pl)InputServicing">InputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OffscreenPresenting.html">OffscreenPresenting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OutputServicing.html">OutputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoRecorderDelegate.html">VideoRecorderDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk21OffscreenRenderTargeta">OffscreenRenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk20RotateCameraCallBacka">RotateCameraCallBack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CameraDevice</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CameraDevice</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CameraDevice</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/InputServiceDelegate.html">InputServiceDelegate</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>CameraDevice provides access to the phone camera module.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC4Modea"></a>
+                    <a name="//apple_ref/swift/Alias/Mode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC4Modea">Mode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Mode</span> <span class="o">=</span> <span class="kt"><a href="../Enums/CameraSessionType.html">CameraSessionType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC14videoDelegatesAA17MulticastDelegateCyAA0cd5VideoH0_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/videoDelegates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC14videoDelegatesAA17MulticastDelegateCyAA0cd5VideoH0_pGvp">videoDelegates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">videoDelegates</span><span class="p">:</span> <span class="kt"><a href="../Classes/MulticastDelegate.html">MulticastDelegate</a></span><span class="o">&lt;</span><span class="n">any</span> <span class="kt"><a href="../Protocols/CameraDeviceVideoDelegate.html">CameraDeviceVideoDelegate</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC14audioDelegatesAA17MulticastDelegateCyAA0cd5AudioH0_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/audioDelegates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC14audioDelegatesAA17MulticastDelegateCyAA0cd5AudioH0_pGvp">audioDelegates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioDelegates</span><span class="p">:</span> <span class="kt"><a href="../Classes/MulticastDelegate.html">MulticastDelegate</a></span><span class="o">&lt;</span><span class="n">any</span> <span class="kt"><a href="../Protocols/CameraDeviceAudioDelegate.html">CameraDeviceAudioDelegate</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC4modeAA0C11SessionTypeOvp"></a>
+                    <a name="//apple_ref/swift/Property/mode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC4modeAA0C11SessionTypeOvp">mode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current lens mode</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/CameraDevice.html#/s:9BanubaSdk12CameraDeviceC4Modea">Mode</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC18trackUIOrientationSbvp"></a>
+                    <a name="//apple_ref/swift/Property/trackUIOrientation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC18trackUIOrientationSbvp">trackUIOrientation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Track UI orientation and change pushed frames camera orientation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">trackUIOrientation</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC10cameraMode20captureSessionPreset8fpsLimitAcA0cH4TypeO_So09AVCapturehI0aSdtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cameraMode:captureSessionPreset:fpsLimit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC10cameraMode20captureSessionPreset8fpsLimitAcA0cH4TypeO_So09AVCapturehI0aSdtcfc">init(cameraMode:<wbr>captureSessionPreset:<wbr>fpsLimit:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create CameraDevice.
+After create <code>start</code> should be called to begin frames forwarding through CameraDeviceVideoDelegate and CameraDeviceAudioDelegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">cameraMode</span><span class="p">:</span> <span class="kt"><a href="../Classes/CameraDevice.html#/s:9BanubaSdk12CameraDeviceC4Modea">Mode</a></span><span class="p">,</span>
+    <span class="nv">captureSessionPreset</span><span class="p">:</span> <span class="kt">AVCaptureSession</span><span class="o">.</span><span class="kt">Preset</span><span class="p">,</span>
+    <span class="nv">fpsLimit</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cameraMode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>use front or back lens</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>captureSessionPreset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>resolution for video frames feed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fpsLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>max frame rate</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC5startyyF"></a>
+                    <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC5startyyF">start()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start frames forwarding</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC4stopyyF"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC4stopyyF">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop frames forwarding</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC10switchModeyyF"></a>
+                    <a name="//apple_ref/swift/Method/switchMode()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC10switchModeyyF">switchMode()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Switch current lens mode, front to back or back to front</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">switchMode</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC9takePhoto8settings10completionyAA0cF8SettingsC_ySo11CVBufferRefaSg_So16BNBFullImageDataCSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/takePhoto(settings:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC9takePhoto8settings10completionyAA0cF8SettingsC_ySo11CVBufferRefaSg_So16BNBFullImageDataCSgtctF">takePhoto(settings:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Take photo with camera settings</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">takePhoto</span><span class="p">(</span><span class="nv">settings</span><span class="p">:</span> <span class="kt"><a href="../Classes/CameraPhotoSettings.html">CameraPhotoSettings</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">CVPixelBuffer</span><span class="p">?,</span> <span class="kt">BNBFullImageData</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC4push8cmBufferySo08CMSampleG3Refa_tF"></a>
+                    <a name="//apple_ref/swift/Method/push(cmBuffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC4push8cmBufferySo08CMSampleG3Refa_tF">push(cmBuffer:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">push</span><span class="p">(</span><span class="nv">cmBuffer</span><span class="p">:</span> <span class="kt">CMSampleBuffer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk12CameraDeviceC4push8cvBufferySo11CVBufferRefa_tF"></a>
+                    <a name="//apple_ref/swift/Method/push(cvBuffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk12CameraDeviceC4push8cvBufferySo11CVBufferRefa_tF">push(cvBuffer:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">push</span><span class="p">(</span><span class="nv">cvBuffer</span><span class="p">:</span> <span class="kt">CVPixelBuffer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2026 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-06-25)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

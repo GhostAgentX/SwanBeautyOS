@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['read_5fpixels_0',['read_pixels',['../classbnb_1_1interfaces_1_1effect__player.html#a457d74ea98ddde4eef12098052010006',1,'bnb::interfaces::effect_player']]],
+  ['release_1',['release',['../classbnb_1_1interfaces_1_1image__releaser.html#af87840b25c1afe3f49394170f5ba97ce',1,'bnb::interfaces::image_releaser']]],
+  ['reload_5fconfig_2',['reload_config',['../classbnb_1_1interfaces_1_1effect__manager.html#a899002aa60b4d3db04d533664e0ade47',1,'bnb::interfaces::effect_manager']]],
+  ['remove_5fcamera_5fpoi_5flistener_3',['remove_camera_poi_listener',['../classbnb_1_1interfaces_1_1effect__player.html#a2d74fb30e4ecf6a7acf25e303a154cd8',1,'bnb::interfaces::effect_player']]],
+  ['remove_5feffect_5factivated_5flistener_4',['remove_effect_activated_listener',['../classbnb_1_1interfaces_1_1effect__manager.html#ab30f8e39e6e49853523e7b96306fe38c',1,'bnb::interfaces::effect_manager']]],
+  ['remove_5feffect_5factivation_5fcompletion_5flistener_5',['remove_effect_activation_completion_listener',['../classbnb_1_1interfaces_1_1effect__player.html#a5162621ec3a77e4d0e69461cfe8b7b6d',1,'bnb::interfaces::effect_player']]],
+  ['remove_5feffect_5fevent_5flistener_6',['remove_effect_event_listener',['../classbnb_1_1interfaces_1_1effect__manager.html#a0ea28acfe3a3c9609aeebd904202acd2',1,'bnb::interfaces::effect_manager']]],
+  ['remove_5feffect_5finfo_5flistener_7',['remove_effect_info_listener',['../classbnb_1_1interfaces_1_1effect__player.html#a351c31396c744615d7f8f9946ba9dbae',1,'bnb::interfaces::effect_player']]],
+  ['remove_5ferror_5flistener_8',['remove_error_listener',['../classbnb_1_1interfaces_1_1effect__manager.html#a510fe39d52c7732e9a903055442bc908',1,'bnb::interfaces::effect_manager']]],
+  ['remove_5fface_5fnumber_5flistener_9',['remove_face_number_listener',['../classbnb_1_1interfaces_1_1effect__player.html#a185eccf1f2f879ba817909d2afcf2d57',1,'bnb::interfaces::effect_player']]],
+  ['remove_5fframe_5fdata_5flistener_10',['remove_frame_data_listener',['../classbnb_1_1interfaces_1_1effect__player.html#a48a6404091416262780553253368bd40',1,'bnb::interfaces::effect_player']]],
+  ['remove_5fframe_5fduration_5flistener_11',['remove_frame_duration_listener',['../classbnb_1_1interfaces_1_1effect__player.html#af345cd61812c5e34592c9ed81d679487',1,'bnb::interfaces::effect_player']]],
+  ['remove_5fhint_5flistener_12',['remove_hint_listener',['../classbnb_1_1interfaces_1_1effect__manager.html#a356bdc601ee9d242e2eda4ae13cb3805',1,'bnb::interfaces::effect_manager']]],
+  ['remove_5fresource_5fpath_13',['remove_resource_path',['../classbnb_1_1interfaces_1_1utility__manager.html#adcff47950d8fb999d8591353aad0cca1',1,'bnb::interfaces::utility_manager']]],
+  ['render_14',['render',['../classbnb_1_1player__api_1_1interfaces_1_1player.html#a733a0761519fa0aedd0be93c00e502cd',1,'bnb::player_api::interfaces::player']]],
+  ['reset_15',['reset',['../classbnb_1_1interfaces_1_1effect.html#a33e25aef74202823a5835e678a9e8bd5',1,'bnb::interfaces::effect']]],
+  ['rgb_5foffsets_16',['rgb_offsets',['../classbnb_1_1bpc8__image__t.html#aff9d45fea3d384378b03b383a4d0277a',1,'bnb::bpc8_image_t']]],
+  ['rgb_5fpixel_5fat_17',['rgb_pixel_at',['../classbnb_1_1bpc8__image__t.html#a5c5469d9c141a9ea6294005ed82b9c07',1,'bnb::bpc8_image_t']]]
+];

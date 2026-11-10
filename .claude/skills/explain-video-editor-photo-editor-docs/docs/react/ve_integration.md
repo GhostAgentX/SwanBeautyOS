@@ -1,0 +1,142 @@
+# Integration Guide on react Native
+
+> Integration Guide on react Native
+
+# Integration Guide on react Native
+
+This guide helps to complete full Video Editor SDK integration.
+
+## Configuration
+
+### Android
+
+#### Add Activity
+Add ```VideoCreationActivity``` in [AndroidManifest.xml](https://github.com/Banuba/ve-sdk-react-native/blob/master/example/android/app/src/main/AndroidManifest.xml#L30) file.
+``` xml
+    <activity
+        android:name="com.banuba.sdk.ve.flow.VideoCreationActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/CustomIntegrationAppTheme"
+        android:windowSoftInputMode="adjustResize"
+        tools:replace="android:theme" />
+```
+
+### IOS
+
+:::important
+Please make sure Bridge Header file exits in ios folder.
+:::
+
+#### Add specs to Podfile
+
+Add the following specs at the top of your [Podfile](https://github.com/Banuba/ve-sdk-react-native/blob/master/example/ios/Podfile)
+```
+platform :ios, '15.0'
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/Banuba/specs.git'
+source 'https://github.com/sdk-banuba/banuba-sdk-podspecs.git'
+```
+
+#### Add permissions
+
+Specify the required iOS permissions used by the SDK in your [Info.plist](https://github.com/Banuba/ve-sdk-react-native/blob/master/example/ios/VideoEditorReactNativeExample/Info.plist)
+```
+<key>NSAppleMusicUsageDescription</key>
+<string>This app requires access to the media library</string>
+<key>NSCameraUsageDescription</key>
+<string>This app requires access to the camera.</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>This app requires access to the microphone.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>This app requires access to the photo library.</string>
+```
+
+## Add AR effects
+[Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) product is used on camera and editor screens for applying various AR effects while making video content.
+
+1. Android - add effects to the project by the path [android/app/src/main/assets/bnb-resources/effects](https://github.com/Banuba/ve-sdk-react-native/blob/master/example/android/app/src/main/assets/).
+2. iOS - add the effect to resource folder ```bundleEffects```. Make sure to select the "Copy items if needed" and "Create folder references" checkboxes while adding effects to the ```bundleEffects``` folder.
+
+## Disable Face AR SDK
+
+### Android
+
+Set the ```ENABLE_FACE_AR``` flag to the [gradle.properties](https://github.com/Banuba/ve-sdk-react-native/blob/master/example/android/gradle.properties#L42):
+
+```diff
+...
+newArchEnabled=true
+
+# Use this property to enable or disable the Hermes JS engine.
+# If set to false, you will be using JSC instead.
+hermesEnabled=true
++ ENABLE_FACE_AR=false
+```
+
+### IOS
+
+Set the environment ```ENABLE_FACE_AR``` flag the the [PodFile](https://github.com/Banuba/ve-sdk-react-native/blob/master/example/ios/Podfile#L15):
+
+```diff
+...
+
+prepare_react_native_project!
+
++ ENV['ENABLE_FACE_AR'] = 'false'
+
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
+...
+```
+
+## Enable Android Photo Picker
+
+Set the ```ENABLE_GALLERY``` flag to the [gradle.properties](https://github.com/Banuba/ve-sdk-react-native/blob/master/example/android/gradle.properties)::
+
+```diff
++ ENABLE_GALLERY=false
+```
+
+## Limit processor architectures on Android
+Banuba Video Editor on Android supports the following processor architectures - ```arm64-v8a```, ```armeabi-v7a```, ```x86-64```.
+Please keep in mind that each architecture adds extra MBs to your app.
+To reduce the app size you can filter architectures in your ```app/build.gradle file```.
+
+```groovy
+...
+defaultConfig {
+    ...
+    // Use only ARM processors
+    ndk {
+        abiFilters 'armeabi-v7a', 'arm64-v8a'
+    }
+}
+```
+
+## Customizations
+
+### Usage
+
+Create instance of the ```FeaturesConfig``` to apply various Video Editor configurations.
+
+Pass the ```FeaturesConfig``` instance to any Video Editor [start method](https://github.com/Banuba/ve-sdk-react-native/blob/master/example/src/App.tsx#L125). For example:
+
+```typescript
+  private featuresConfig = new FeaturesConfigBuilder()
+    .setAudioBrowser(AudioBrowser.fromSource({
+        source: AudioBrowserSource.local,
+        params: null
+        })
+    )
+    .build();
+```
+
+```typescript
+const videoEditor = new VideoEditorPlugin();
+videoEditor.openFromCamera(LICENSE_TOKEN, this.featuresConfig)
+    .then(response => { this.handleVideoExport(response); })
+    .catch(e => { this.handleSdkError(e); });
+```

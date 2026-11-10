@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['on_5fcamera_5fframe_5fduration_5fchanged_0',['on_camera_frame_duration_changed',['../classbnb_1_1interfaces_1_1frame__duration__listener.html#ad9d97f99d406760e526356835c6e9b97',1,'bnb::interfaces::frame_duration_listener']]],
+  ['on_5fcamera_5fpoi_5fchanged_1',['on_camera_poi_changed',['../classbnb_1_1interfaces_1_1camera__poi__listener.html#a9ed90df5f783ff5b10b14de401259d2c',1,'bnb::interfaces::camera_poi_listener']]],
+  ['on_5feffect_5factivated_2',['on_effect_activated',['../classbnb_1_1interfaces_1_1effect__activated__listener.html#aff288eeba9c9ef6dec8535bb99ee0cdb',1,'bnb::interfaces::effect_activated_listener']]],
+  ['on_5feffect_5factivation_5ffinished_3',['on_effect_activation_finished',['../classbnb_1_1interfaces_1_1effect__activation__completion__listener.html#af5605565dc6d594e0f14c0c74aab9ab7',1,'bnb::interfaces::effect_activation_completion_listener']]],
+  ['on_5feffect_5fevent_4',['on_effect_event',['../classbnb_1_1interfaces_1_1effect__event__listener.html#aa9ad1f9856abdec8c88ae0f3ae11da15',1,'bnb::interfaces::effect_event_listener']]],
+  ['on_5feffect_5finfo_5fupdated_5',['on_effect_info_updated',['../classbnb_1_1interfaces_1_1effect__info__listener.html#aa048f7a2cf6a9bc98f98abc2188a9e43',1,'bnb::interfaces::effect_info_listener']]],
+  ['on_5ferror_6',['on_error',['../classbnb_1_1interfaces_1_1error__listener.html#ad8afd15c9b55b9590a6e552c23cd3a18',1,'bnb::interfaces::error_listener']]],
+  ['on_5fface_5fnumber_5fchanged_7',['on_face_number_changed',['../classbnb_1_1interfaces_1_1face__number__listener.html#ac6df5daad1244224f45e5e1206283a6b',1,'bnb::interfaces::face_number_listener']]],
+  ['on_5fframe_5fdata_5fprocessed_8',['on_frame_data_processed',['../classbnb_1_1interfaces_1_1frame__data__listener.html#ac72636246944944565a6b7d2f893add1',1,'bnb::interfaces::frame_data_listener']]],
+  ['on_5fkey_5fdown_9',['on_key_down',['../classbnb_1_1interfaces_1_1input__manager.html#ac4dc98449ae80f1723aba118a21f93b8',1,'bnb::interfaces::input_manager']]],
+  ['on_5frecognizer_5fframe_5fduration_5fchanged_10',['on_recognizer_frame_duration_changed',['../classbnb_1_1interfaces_1_1frame__duration__listener.html#aebca620dfe727a809d24ea1580b72aae',1,'bnb::interfaces::frame_duration_listener']]],
+  ['on_5frender_5fframe_5fduration_5fchanged_11',['on_render_frame_duration_changed',['../classbnb_1_1interfaces_1_1frame__duration__listener.html#aea7cc195cb486a6b5ded4395547945f7',1,'bnb::interfaces::frame_duration_listener']]],
+  ['on_5fresult_12',['on_result',['../classbnb_1_1interfaces_1_1js__callback.html#acd049acb3e0908f62fbcfd3ae4efdf2e',1,'bnb::interfaces::js_callback']]],
+  ['on_5fvideo_5frecord_5fend_13',['on_video_record_end',['../classbnb_1_1interfaces_1_1effect__player.html#a4c0065fa84087f335309117131cecfc0',1,'bnb::interfaces::effect_player']]],
+  ['on_5fvideo_5frecord_5fstart_14',['on_video_record_start',['../classbnb_1_1interfaces_1_1effect__player.html#a5d4c2841d7ee1744db28df6b17161f35',1,'bnb::interfaces::effect_player']]],
+  ['once_15',['once',['../classbnb_1_1player__api_1_1frame__output.html#a97b00163136da24df2e5a818ddc89efa',1,'bnb::player_api::frame_output']]],
+  ['operator_2a_16',['operator*',['../classbnb_1_1transformation.html#a097dee8ede7046d0c2334199b298fcc0',1,'bnb::transformation']]],
+  ['operator_3e_3e_17',['operator&gt;&gt;',['../classbnb_1_1transformation.html#a80deb426a6f29ef272e140d475994e93',1,'bnb::transformation']]]
+];

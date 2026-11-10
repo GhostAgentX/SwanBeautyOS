@@ -1,0 +1,32 @@
+# Camera screen on Flutter
+
+> Camera screen on Flutter
+
+# Camera screen on Flutter
+
+## Usage
+
+Specify instance of ```CameraConfig``` in ```FeaturesConfig``` builder:
+
+```dart
+final config = FeaturesConfigBuilder()
+      .setCameraConfig(
+          CameraConfig(
+              supportsBeauty: false,
+              supportsColorEffects: false,
+              supportsMasks: false,
+              recordModes: [RecordMode.video, RecordMode.photo],
+              autoStartLocalMask: null
+          )
+      )
+      ...
+      .build()
+```
+
+### Options
+
+- ```supportsBeauty``` - Determines whether the camera supports beauty effect. Default value is ```true```.
+- ```supportsColorEffects``` - Determines whether the camera supports color effects. Default value is ```true```.
+- ```supportsMasks``` - Determines whether the camera supports visual effects. Default value is ```true```.
+- ```recordModes``` - Determines which recording modes are supported. Default value is ```[RecordMode.video, RecordMode.photo]```
+- ```autoStartLocalMask``` - Determines whether the camera starts with preselected mask. Default value is ```null```

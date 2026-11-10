@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EffectPlayerConfiguration Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/EffectPlayerConfiguration" class="dashAnchor"></a>
+    <a title="EffectPlayerConfiguration Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        EffectPlayerConfiguration Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BanubaSdkManager.html">BanubaSdkManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseEffectPlayerView.html">BaseEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Camera.html">Camera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraDevice.html">CameraDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraPhotoSettings.html">CameraPhotoSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerView.html">EffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Frame.html">Frame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MetalTextureCache.html">MetalTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MulticastDelegate.html">MulticastDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OGLTextureCache.html">OGLTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLEffectPlayerView.html">OpenGLEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLLayer.html">OpenGLLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputConfiguration.html">OutputConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputSettings.html">OutputSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Photo.html">Photo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBuffer.html">PixelBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV.html">PixelBufferYUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV/PixelFormat.html">– PixelFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player.html">Player</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player/RenderMode.html">– RenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderTarget.html">RenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderedFrame.html">RenderedFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stream.html">Stream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextureCache.html">TextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Video.html">Video</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoExportHelper.html">VideoExportHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoRecorder.html">VideoRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkDrawSettings.html">WatermarkDrawSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkInfo.html">WatermarkInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CameraSessionType.html">CameraSessionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Orientation.html">Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VideoRecordingState.html">VideoRecordingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WatermarkCornerPosition.html">WatermarkCornerPosition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAssetTrack.html">AVAssetTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/BNBFrameData.html">BNBFrameData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGAffineTransform.html">CGAffineTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CIImage.html">CIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/InputService.html">InputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OutputService.html">OutputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITouch.html">UITouch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2peoiyyAA17MulticastDelegateCyxG_xtRlzClF">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2seoiyyAA17MulticastDelegateCyxG_xtRlzClF">-=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Attachable.html">Attachable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AudioCapturing.html">AudioCapturing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BanubaSdkManagerDelegate.html">BanubaSdkManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceAudioDelegate.html">CameraDeviceAudioDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceVideoDelegate.html">CameraDeviceVideoDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraServicing.html">CameraServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraZoomable.html">CameraZoomable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FramePresentable.html">FramePresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InputServiceDelegate.html">InputServiceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:@M@BanubaSdk@objc(pl)InputServicing">InputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OffscreenPresenting.html">OffscreenPresenting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OutputServicing.html">OutputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoRecorderDelegate.html">VideoRecorderDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk21OffscreenRenderTargeta">OffscreenRenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk20RotateCameraCallBacka">RotateCameraCallBack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>EffectPlayerConfiguration</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">EffectPlayerConfiguration</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)cameraMode"></a>
+                    <a name="//apple_ref/swift/Property/cameraMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)cameraMode">cameraMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">cameraMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/CameraSessionType.html">CameraSessionType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)renderSize"></a>
+                    <a name="//apple_ref/swift/Property/renderSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)renderSize">renderSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">renderSize</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)captureSessionPreset"></a>
+                    <a name="//apple_ref/swift/Property/captureSessionPreset" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)captureSessionPreset">captureSessionPreset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Preset for quality of photo or video and audio output.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">captureSessionPreset</span><span class="p">:</span> <span class="kt">AVCaptureSession</span><span class="o">.</span><span class="kt">Preset</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)preferredRenderFrameRate"></a>
+                    <a name="//apple_ref/swift/Property/preferredRenderFrameRate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)preferredRenderFrameRate">preferredRenderFrameRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">preferredRenderFrameRate</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)shouldAutoStartOnEnterForeground"></a>
+                    <a name="//apple_ref/swift/Property/shouldAutoStartOnEnterForeground" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)shouldAutoStartOnEnterForeground">shouldAutoStartOnEnterForeground</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldAutoStartOnEnterForeground</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)isMirrored"></a>
+                    <a name="//apple_ref/swift/Property/isMirrored" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)isMirrored">isMirrored</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">isMirrored</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)flipVertically"></a>
+                    <a name="//apple_ref/swift/Property/flipVertically" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)flipVertically">flipVertically</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">flipVertically</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)delayedCameraInitialization"></a>
+                    <a name="//apple_ref/swift/Property/delayedCameraInitialization" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)delayedCameraInitialization">delayedCameraInitialization</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">delayedCameraInitialization</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)orientation"></a>
+                    <a name="//apple_ref/swift/Property/orientation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)orientation">orientation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">orientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)notificationCenter"></a>
+                    <a name="//apple_ref/swift/Property/notificationCenter" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)notificationCenter">notificationCenter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">notificationCenter</span><span class="p">:</span> <span class="kt">NotificationCenter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)fpsLimit"></a>
+                    <a name="//apple_ref/swift/Property/fpsLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(py)fpsLimit">fpsLimit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">fpsLimit</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(im)initWithCameraMode:renderSize:captureSessionPreset:orientation:preferredRenderFrameRate:shouldAutoStartOnEnterForeground:isMirrored:flipVertically:fpsLimit:delayedCameraInitialization:notificationCenter:"></a>
+                    <a name="//apple_ref/swift/Method/init(cameraMode:renderSize:captureSessionPreset:orientation:preferredRenderFrameRate:shouldAutoStartOnEnterForeground:isMirrored:flipVertically:fpsLimit:delayedCameraInitialization:notificationCenter:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)EffectPlayerConfiguration(im)initWithCameraMode:renderSize:captureSessionPreset:orientation:preferredRenderFrameRate:shouldAutoStartOnEnterForeground:isMirrored:flipVertically:fpsLimit:delayedCameraInitialization:notificationCenter:">init(cameraMode:<wbr>renderSize:<wbr>captureSessionPreset:<wbr>orientation:<wbr>preferredRenderFrameRate:<wbr>shouldAutoStartOnEnterForeground:<wbr>isMirrored:<wbr>flipVertically:<wbr>fpsLimit:<wbr>delayedCameraInitialization:<wbr>notificationCenter:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">cameraMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/CameraSessionType.html">CameraSessionType</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">FrontCameraSession</span><span class="p">,</span>
+    <span class="nv">renderSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">720</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">1280</span><span class="p">),</span>
+    <span class="nv">captureSessionPreset</span><span class="p">:</span> <span class="kt">AVCaptureSession</span><span class="o">.</span><span class="kt">Preset</span> <span class="o">=</span> <span class="o">.</span><span class="n">hd1280x720</span><span class="p">,</span>
+    <span class="nv">orientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="o">=</span> <span class="o">.</span><span class="n">deg90</span><span class="p">,</span>
+    <span class="nv">preferredRenderFrameRate</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nv">shouldAutoStartOnEnterForeground</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nv">isMirrored</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">flipVertically</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nv">fpsLimit</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nv">delayedCameraInitialization</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">notificationCenter</span><span class="p">:</span> <span class="kt">NotificationCenter</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2026 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-06-25)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Player Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Player" class="dashAnchor"></a>
+    <a title="Player Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        Player Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BanubaSdkManager.html">BanubaSdkManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseEffectPlayerView.html">BaseEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Camera.html">Camera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraDevice.html">CameraDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraPhotoSettings.html">CameraPhotoSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerView.html">EffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Frame.html">Frame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MetalTextureCache.html">MetalTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MulticastDelegate.html">MulticastDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OGLTextureCache.html">OGLTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLEffectPlayerView.html">OpenGLEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLLayer.html">OpenGLLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputConfiguration.html">OutputConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputSettings.html">OutputSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Photo.html">Photo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBuffer.html">PixelBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV.html">PixelBufferYUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV/PixelFormat.html">– PixelFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player.html">Player</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player/RenderMode.html">– RenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderTarget.html">RenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderedFrame.html">RenderedFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stream.html">Stream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextureCache.html">TextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Video.html">Video</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoExportHelper.html">VideoExportHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoRecorder.html">VideoRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkDrawSettings.html">WatermarkDrawSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkInfo.html">WatermarkInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CameraSessionType.html">CameraSessionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Orientation.html">Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VideoRecordingState.html">VideoRecordingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WatermarkCornerPosition.html">WatermarkCornerPosition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAssetTrack.html">AVAssetTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/BNBFrameData.html">BNBFrameData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGAffineTransform.html">CGAffineTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CIImage.html">CIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/InputService.html">InputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OutputService.html">OutputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITouch.html">UITouch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2peoiyyAA17MulticastDelegateCyxG_xtRlzClF">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2seoiyyAA17MulticastDelegateCyxG_xtRlzClF">-=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Attachable.html">Attachable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AudioCapturing.html">AudioCapturing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BanubaSdkManagerDelegate.html">BanubaSdkManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceAudioDelegate.html">CameraDeviceAudioDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceVideoDelegate.html">CameraDeviceVideoDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraServicing.html">CameraServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraZoomable.html">CameraZoomable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FramePresentable.html">FramePresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InputServiceDelegate.html">InputServiceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:@M@BanubaSdk@objc(pl)InputServicing">InputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OffscreenPresenting.html">OffscreenPresenting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OutputServicing.html">OutputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoRecorderDelegate.html">VideoRecorderDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk21OffscreenRenderTargeta">OffscreenRenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk20RotateCameraCallBacka">RotateCameraCallBack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Player</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Player</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Player uses <code>input</code> to take processed frames, draw <code>effect</code> and present them into the <code>outputs</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC06effectC0So09BNBEffectC0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/effectPlayer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC06effectC0So09BNBEffectC0Cvp">effectPlayer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">effectPlayer</span><span class="p">:</span> <span class="kt">BNBEffectPlayer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC13enableTouchesSbvp"></a>
+                    <a name="//apple_ref/swift/Property/enableTouches" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC13enableTouchesSbvp">enableTouches</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">enableTouches</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC10RenderModeO"></a>
+                    <a name="//apple_ref/swift/Enum/RenderMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC10RenderModeO">RenderMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Rendering modes</p>
+
+                        <a href="../Classes/Player/RenderMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RenderMode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC10renderModeAC06RenderE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/renderMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC10renderModeAC06RenderE0Ovp">renderMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setup rendering mode, <code>loop</code> by default</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">renderMode</span><span class="p">:</span> <span class="kt"><a href="../Classes/Player/RenderMode.html">RenderMode</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC4sizeSo6CGSizeVvp"></a>
+                    <a name="//apple_ref/swift/Property/size" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC4sizeSo6CGSizeVvp">size</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current player <code>size</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC6volumeSfvp"></a>
+                    <a name="//apple_ref/swift/Property/volume" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC6volumeSfvp">volume</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Player <code>volume</code> in range [0, 1] where 1 is maximum</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">volume</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC6effectSo9BNBEffectCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/effect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC6effectSo9BNBEffectCSgvp">effect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current <code>effect</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">effect</span><span class="p">:</span> <span class="kt">BNBEffect</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC3fps13renderBackend9useThreadACSi_So09BNBRenderF4TypeVSbtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(fps:renderBackend:useThread:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC3fps13renderBackend9useThreadACSi_So09BNBRenderF4TypeVSbtcfc">init(fps:<wbr>renderBackend:<wbr>useThread:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create player
+<code>play</code> should be called after create,  to start <code><a href="../Classes/Player.html#/s:9BanubaSdk6PlayerC6effectSo9BNBEffectCSgvp">effect</a></code> applying</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">fps</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="nv">renderBackend</span><span class="p">:</span> <span class="kt">BNBRenderBackendType</span> <span class="o">=</span> <span class="o">.</span><span class="n">metal</span><span class="p">,</span> <span class="nv">useThread</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>max rendering frame rate, 30 by default</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC4playyyF"></a>
+                    <a name="//apple_ref/swift/Method/play()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC4playyyF">play()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start playback, create RenderTarget</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">play</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC5pauseyyF"></a>
+                    <a name="//apple_ref/swift/Method/pause()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC5pauseyyF">pause()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pause playback</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pause</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC4stopyyF"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC4stopyyF">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop playback, destroy RenderTarget</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC3use5inputyAA5Input_pSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/use(input:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC3use5inputyAA5Input_pSg_tF">use(input:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use provided <code>input</code> with current <code>outputs</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">use</span><span class="p">(</span><span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Input.html">Input</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC3use7outputsySayAA6Output_pG_tF"></a>
+                    <a name="//apple_ref/swift/Method/use(outputs:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC3use7outputsySayAA6Output_pG_tF">use(outputs:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use provided <code>outputs</code> with current <code>input</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">use</span><span class="p">(</span><span class="nv">outputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/Output.html">Output</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC3use5input7outputsyAA5Input_pSg_SayAA6Output_pGtF"></a>
+                    <a name="//apple_ref/swift/Method/use(input:outputs:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC3use5input7outputsyAA5Input_pSg_SayAA6Output_pGtF">use(input:<wbr>outputs:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use provided <code>input</code> and <code>outputs</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">use</span><span class="p">(</span><span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Input.html">Input</a></span><span class="p">?,</span> <span class="nv">outputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/Output.html">Output</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC4load6effect4sync10completionSo9BNBEffectCSgSS_SbyAJcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/load(effect:sync:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC4load6effect4sync10completionSo9BNBEffectCSgSS_SbyAJcSgtF">load(effect:<wbr>sync:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Load <code><a href="../Classes/Player.html#/s:9BanubaSdk6PlayerC6effectSo9BNBEffectCSgvp">effect</a></code> with path</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">load</span><span class="p">(</span><span class="nv">effect</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sync</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">BNBEffect</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">BNBEffect</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>effect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>path to <code><a href="../Classes/Player.html#/s:9BanubaSdk6PlayerC6effectSo9BNBEffectCSgvp">effect</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sync</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>wait until <code><a href="../Classes/Player.html#/s:9BanubaSdk6PlayerC6effectSo9BNBEffectCSgvp">effect</a></code> is loaded</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback is fired when <code><a href="../Classes/Player.html#/s:9BanubaSdk6PlayerC6effectSo9BNBEffectCSgvp">effect</a></code> becomes active, argument can be <code>nil</code> if loading error or another <code><a href="../Classes/Player.html#/s:9BanubaSdk6PlayerC6effectSo9BNBEffectCSgvp">effect</a></code> was loaded</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC6reload6config4syncSo15BNBReloadResultCSgSS_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/reload(config:sync:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC6reload6config4syncSo15BNBReloadResultCSgSS_SbtF">reload(config:<wbr>sync:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reload <code>config</code> for current effect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reload</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sync</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">BNBReloadResult</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>effect config JSON.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sync</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>wait until effect is reloaded and activated.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC8onResize6actionyySo6CGSizeVc_tF"></a>
+                    <a name="//apple_ref/swift/Method/onResize(action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC8onResize6actionyySo6CGSizeVc_tF">onResize(action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setup callback on <code>resize</code> event</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onResize</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback is fired when <code>input</code> gives frame with changed <code><a href="../Classes/Player.html#/s:9BanubaSdk6PlayerC4sizeSo6CGSizeVvp">size</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC8onRender6actionyySb_s5Int64Vtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/onRender(action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC8onRender6actionyySb_s5Int64Vtc_tF">onRender(action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setup callback on <code>render</code> event</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onRender</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback which reports <code>status</code> and <code>frameNumber</code>, if success</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk6PlayerC6renderSbyF"></a>
+                    <a name="//apple_ref/swift/Method/render()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk6PlayerC6renderSbyF">render()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Draw and present rendered result synchronously, can be used only in <code>manual</code> rendering mode.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">render</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2026 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-06-25)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

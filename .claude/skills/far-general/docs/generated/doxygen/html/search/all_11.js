@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['texture_5foutput_0',['texture_output',['../classbnb_1_1player__api_1_1texture__output.html',1,'bnb::player_api']]],
+  ['time_5fbombed_1',['time_bombed',['../license__status_8hpp.html#a76ffc73eaa7a68efbc2a4edd8e5695a2adb79970e2e36dc97979322102dbc5792',1,'bnb::interfaces']]],
+  ['time_5fstamped_5fevent_2',['time_stamped_event',['../classbnb_1_1time__stamped__event.html',1,'bnb']]],
+  ['to_5fstring_3',['to_string',['../classbnb_1_1transformation.html#a187ad9d1333c71a72aa7aa7bd0e6b6b0',1,'bnb::transformation']]],
+  ['total_5fau_5fcount_4',['total_au_count',['../action__units__indices_8hpp.html#ac4c10c2062ee892eb7e476b369acf36aa9abbb530b57118af201248d561b6c972',1,'bnb::interfaces']]],
+  ['touch_5',['touch',['../structbnb_1_1interfaces_1_1touch.html',1,'bnb::interfaces']]],
+  ['touch_2ehpp_6',['touch.hpp',['../touch_8hpp.html',1,'']]],
+  ['transform_7',['transform',['../group___types.html#ga28b98f39bf57caeb7a333039c97e9376',1,'bnb::transform(const uint8_t *src, uint32_t src_w, uint32_t src_h, uint8_t *dst, uint32_t dst_w, uint32_t dst_h, uint32_t channels, const transformation &amp;t)'],['../group___types.html#ga6a4b0d242096f6022f1eacd1230aae37',1,'bnb::transform(const float *src, uint32_t src_w, uint32_t src_h, float *dst, uint32_t dst_w, uint32_t dst_h, uint32_t channels, const transformation &amp;t)'],['../group___types.html#ga5622204b1c241abaf02386505c3c85f5',1,'bnb::transform(const uint8_t *src, uint32_t src_w, uint32_t src_h, uint8_t *dst, uint32_t dst_w, uint32_t dst_h, uint32_t channels, const transformation &amp;from, const transformation &amp;to)'],['../group___types.html#ga73b6168bcca69e983da534e4ecf6422f',1,'bnb::transform(const point2d &amp;point, const transformation &amp;t)'],['../group___types.html#ga6e61f178821520f1fe2b877616abadfb',1,'bnb::transform(const point2d &amp;point, const transformation &amp;from, const transformation &amp;to)'],['../group___types.html#ga85f31dc4bcdedd8ff8d46508c8e6b512',1,'bnb::transform(const pixel_rect &amp;rect, const transformation &amp;t)']]],
+  ['transform1x1_8',['transform1x1',['../group___types.html#ga10f3b010b60a9276ba2989fe3be428f5',1,'bnb']]],
+  ['transform_5fpoint_9',['transform_point',['../classbnb_1_1interfaces_1_1transformation.html#a9be9d0adf976abb3c799f9b0ece0e570',1,'bnb::interfaces::transformation::transform_point()'],['../group___types.html#ga78cecf75f778a66b8992b1fde34dd469',1,'bnb::transformation::transform_point()']]],
+  ['transformable_5fevent_10',['transformable_event',['../structbnb_1_1interfaces_1_1transformable__event.html',1,'bnb::interfaces::transformable_event'],['../structbnb_1_1transformable__event.html',1,'bnb::transformable_event&lt; T &gt;']]],
+  ['transformable_5fevent_2ehpp_11',['transformable_event.hpp',['../transformable__event_8hpp.html',1,'']]],
+  ['transformable_5fevent_3c_20full_5fimage_5ft_20_3e_12',['transformable_event&lt; full_image_t &gt;',['../structbnb_1_1transformable__event.html',1,'bnb']]],
+  ['transformation_13',['transformation',['../classbnb_1_1interfaces_1_1transformation.html',1,'bnb::interfaces::transformation'],['../classbnb_1_1transformation.html',1,'bnb::transformation'],['../classbnb_1_1transformation.html#aac28ae502956c12fc27d668cf46af47b',1,'bnb::transformation::transformation()'],['../classbnb_1_1transformation.html#a8c6dd12dc1da9a1da2c2c47f2347d211',1,'bnb::transformation::transformation(const mat_t &amp;mat)'],['../classbnb_1_1transformation.html#adecb8d9659e22a3f90726b9fba0c40cd',1,'bnb::transformation::transformation(rotate_t rotate)'],['../classbnb_1_1transformation.html#aa0b9f02a267b55aa92f6bd81d8b35bef',1,'bnb::transformation::transformation(float scale_x, float scale_y=1.f, float t_x=0, float t_y=0, rotate_t rotate=rotate_t::deg_0, bool flip_x=false, bool flip_y=false)'],['../classbnb_1_1transformation.html#a8f3fefd288c476f7cabb33bc1f149010',1,'bnb::transformation::transformation(affine_coeffs_t coeffs)'],['../classbnb_1_1transformation.html#abf288c1254b1632a09eeb048735bd3f1',1,'bnb::transformation::transformation(pixel_rect source_rect, pixel_rect target_rect, rotate_t rotate=rotate_t::deg_0, bool flip_x=false, bool flip_y=false)']]],
+  ['transformation_2ehpp_14',['transformation.hpp',['../interfaces_2transformation_8hpp.html',1,'']]],
+  ['transformed_5fmask_15',['transformed_mask',['../structbnb_1_1interfaces_1_1transformed__mask.html',1,'bnb::interfaces']]],
+  ['transformed_5fmask_2ehpp_16',['transformed_mask.hpp',['../transformed__mask_8hpp.html',1,'']]],
+  ['transformed_5fmask_5fbyte_17',['transformed_mask_byte',['../structbnb_1_1interfaces_1_1transformed__mask__byte.html',1,'bnb::interfaces']]],
+  ['transformed_5fmask_5fbyte_2ehpp_18',['transformed_mask_byte.hpp',['../transformed__mask__byte_8hpp.html',1,'']]],
+  ['transformed_5fmask_5ffloat_19',['transformed_mask_float',['../structbnb_1_1interfaces_1_1transformed__mask__float.html',1,'bnb::interfaces']]],
+  ['transformed_5fmask_5ffloat_2ehpp_20',['transformed_mask_float.hpp',['../transformed__mask__float_8hpp.html',1,'']]],
+  ['transformed_5fmask_5fgpu_21',['transformed_mask_gpu',['../structbnb_1_1interfaces_1_1transformed__mask__gpu.html',1,'bnb::interfaces']]],
+  ['transformed_5fmask_5fgpu_2ehpp_22',['transformed_mask_gpu.hpp',['../transformed__mask__gpu_8hpp.html',1,'']]],
+  ['transposed_5fdata_23',['transposed_data',['../classbnb_1_1transformation.html#a11c5b91bd2fa88f7a7c19b6b9d1aa9f9',1,'bnb::transformation']]],
+  ['types_24',['Types',['../group___types.html',1,'']]]
+];

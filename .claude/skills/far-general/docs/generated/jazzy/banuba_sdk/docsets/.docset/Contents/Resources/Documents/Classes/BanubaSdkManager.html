@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BanubaSdkManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/BanubaSdkManager" class="dashAnchor"></a>
+    <a title="BanubaSdkManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        BanubaSdkManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BanubaSdkManager.html">BanubaSdkManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseEffectPlayerView.html">BaseEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Camera.html">Camera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraDevice.html">CameraDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CameraPhotoSettings.html">CameraPhotoSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EffectPlayerView.html">EffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Frame.html">Frame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MetalTextureCache.html">MetalTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MulticastDelegate.html">MulticastDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OGLTextureCache.html">OGLTextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLEffectPlayerView.html">OpenGLEffectPlayerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenGLLayer.html">OpenGLLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputConfiguration.html">OutputConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OutputSettings.html">OutputSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Photo.html">Photo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBuffer.html">PixelBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV.html">PixelBufferYUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PixelBufferYUV/PixelFormat.html">– PixelFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player.html">Player</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Player/RenderMode.html">– RenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderTarget.html">RenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RenderedFrame.html">RenderedFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stream.html">Stream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextureCache.html">TextureCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Video.html">Video</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoExportHelper.html">VideoExportHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoRecorder.html">VideoRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkDrawSettings.html">WatermarkDrawSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkInfo.html">WatermarkInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CameraSessionType.html">CameraSessionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Orientation.html">Orientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VideoRecordingState.html">VideoRecordingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WatermarkCornerPosition.html">WatermarkCornerPosition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAssetTrack.html">AVAssetTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/BNBFrameData.html">BNBFrameData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGAffineTransform.html">CGAffineTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CIImage.html">CIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/InputService.html">InputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OutputService.html">OutputService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITouch.html">UITouch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2peoiyyAA17MulticastDelegateCyxG_xtRlzClF">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9BanubaSdk2seoiyyAA17MulticastDelegateCyxG_xtRlzClF">-=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Attachable.html">Attachable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AudioCapturing.html">AudioCapturing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BanubaSdkManagerDelegate.html">BanubaSdkManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceAudioDelegate.html">CameraDeviceAudioDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraDeviceVideoDelegate.html">CameraDeviceVideoDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraServicing.html">CameraServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CameraZoomable.html">CameraZoomable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FramePresentable.html">FramePresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InputServiceDelegate.html">InputServiceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:@M@BanubaSdk@objc(pl)InputServicing">InputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OffscreenPresenting.html">OffscreenPresenting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OutputServicing.html">OutputServicing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoRecorderDelegate.html">VideoRecorderDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk21OffscreenRenderTargeta">OffscreenRenderTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9BanubaSdk20RotateCameraCallBacka">RotateCameraCallBack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BanubaSdkManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">BanubaSdkManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">extension</span> <span class="kt">BanubaSdkManager</span><span class="p">:</span> <span class="kt"><a href="../Protocols/InputServiceDelegate.html">InputServiceDelegate</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">BanubaSdkManager</span><span class="p">:</span> <span class="kt">BNBCameraPoiListener</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">BanubaSdkManager</span><span class="p">:</span> <span class="kt">BNBFaceNumberListener</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">BanubaSdkManager</span><span class="p">:</span> <span class="kt">BNBFrameDurationListener</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)delegate"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)delegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/BanubaSdkManagerDelegate.html">BanubaSdkManagerDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)effectPlayer"></a>
+                    <a name="//apple_ref/swift/Property/effectPlayer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)effectPlayer">effectPlayer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access to current instance of BNBEffectPlayer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">effectPlayer</span><span class="p">:</span> <span class="kt">BNBEffectPlayer</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)faceOrientation"></a>
+                    <a name="//apple_ref/swift/Property/faceOrientation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)faceOrientation">faceOrientation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Face orintation in frame (degrees).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">faceOrientation</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)effectManager"></a>
+                    <a name="//apple_ref/swift/Method/effectManager()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)effectManager">effectManager()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">effectManager</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">BNBEffectManager</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)autoRotationEnabled"></a>
+                    <a name="//apple_ref/swift/Property/autoRotationEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)autoRotationEnabled">autoRotationEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable autorotation mode. Camera orientation and render size should change along with UI orientation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">autoRotationEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)loadEffect:synchronous:"></a>
+                    <a name="//apple_ref/swift/Method/loadEffect(_:synchronous:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)loadEffect:synchronous:">loadEffect(_:<wbr>synchronous:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadEffect</span><span class="p">(</span><span class="n">_</span> <span class="nv">effectUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">synchronous</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">BNBEffect</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>effectUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>path to effect relative to resource paths passed to <code>initialize</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>synchronous</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block the call until effect is loaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)unloadEffectWithEffect:"></a>
+                    <a name="//apple_ref/swift/Method/unloadEffect(effect:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)unloadEffectWithEffect:">unloadEffect(effect:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">unloadEffect</span><span class="p">(</span><span class="nv">effect</span><span class="p">:</span> <span class="kt">BNBEffect</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>effect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>effect which should be unloaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)currentEffect"></a>
+                    <a name="//apple_ref/swift/Method/currentEffect()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)currentEffect">currentEffect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">currentEffect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">BNBEffect</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setMaxFaces:"></a>
+                    <a name="//apple_ref/swift/Method/setMaxFaces(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setMaxFaces:">setMaxFaces(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maximum number of faces to trace simultaneously</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setMaxFaces</span><span class="p">(</span><span class="n">_</span> <span class="nv">maxFaces</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)input"></a>
+                    <a name="//apple_ref/swift/Property/input" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)input">input</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/c:@M@BanubaSdk@objc(pl)InputServicing">InputServicing</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)output"></a>
+                    <a name="//apple_ref/swift/Property/output" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)output">output</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">output</span><span class="p">:</span> <span class="kt"><a href="../Protocols/OutputServicing.html">OutputServicing</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/GPU"></a>
+                <a name="//apple_ref/swift/Section/GPU" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/GPU"></a>
+                  <h3 class="section-name"><span>GPU</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)renderTarget"></a>
+                    <a name="//apple_ref/swift/Property/renderTarget" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)renderTarget">renderTarget</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">renderTarget</span><span class="p">:</span> <span class="kt"><a href="../Classes/RenderTarget.html">RenderTarget</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)playerConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/playerConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)playerConfiguration">playerConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">playerConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setRenderTargetWithView:playerConfiguration:"></a>
+                    <a name="//apple_ref/swift/Method/setRenderTarget(view:playerConfiguration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setRenderTargetWithView:playerConfiguration:">setRenderTarget(view:<wbr>playerConfiguration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setRenderTarget</span><span class="p">(</span>
+    <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Classes/EffectPlayerView.html">EffectPlayerView</a></span><span class="p">,</span>
+    <span class="nv">playerConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a></span><span class="p">?</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setOpenGLRenderTargetWithView:playerConfiguration:"></a>
+                    <a name="//apple_ref/swift/Method/setOpenGLRenderTarget(view:playerConfiguration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setOpenGLRenderTargetWithView:playerConfiguration:">setOpenGLRenderTarget(view:<wbr>playerConfiguration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setOpenGLRenderTarget</span><span class="p">(</span>
+    <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenGLEffectPlayerView.html">OpenGLEffectPlayerView</a></span><span class="p">,</span>
+    <span class="nv">playerConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a></span><span class="p">?</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setRenderTargetWithLayer:playerConfiguration:"></a>
+                    <a name="//apple_ref/swift/Method/setRenderTarget(layer:playerConfiguration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setRenderTargetWithLayer:playerConfiguration:">setRenderTarget(layer:<wbr>playerConfiguration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this method for offscreen rendering only. For onscreen rendering use version
+wich accepts <code><a href="../Classes/EffectPlayerView.html">EffectPlayerView</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setRenderTarget</span><span class="p">(</span>
+    <span class="nv">layer</span><span class="p">:</span> <span class="kt">CAMetalLayer</span><span class="p">,</span>
+    <span class="nv">playerConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a></span><span class="p">?</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setOpenGLRenderTargetWithLayer:playerConfiguration:"></a>
+                    <a name="//apple_ref/swift/Method/setOpenGLRenderTarget(layer:playerConfiguration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setOpenGLRenderTargetWithLayer:playerConfiguration:">setOpenGLRenderTarget(layer:<wbr>playerConfiguration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setOpenGLRenderTarget</span><span class="p">(</span>
+    <span class="nv">layer</span><span class="p">:</span> <span class="kt">CAEAGLLayer</span><span class="p">,</span>
+    <span class="nv">playerConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a></span><span class="p">?</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)removeRenderTarget"></a>
+                    <a name="//apple_ref/swift/Method/removeRenderTarget()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)removeRenderTarget">removeRenderTarget()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeRenderTarget</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Render%20RunLoop"></a>
+                <a name="//apple_ref/swift/Section/Render RunLoop" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Render%20RunLoop"></a>
+                  <h3 class="section-name"><span>Render RunLoop</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9BanubaSdk0aB7ManagerC21editingImageFrameDataSo08BNBFrameG0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/editingImageFrameData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9BanubaSdk0aB7ManagerC21editingImageFrameDataSo08BNBFrameG0CSgvp">editingImageFrameData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">editingImageFrameData</span><span class="p">:</span> <span class="kt">BNBFrameData</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)renderThread"></a>
+                    <a name="//apple_ref/swift/Property/renderThread" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)renderThread">renderThread</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">renderThread</span><span class="p">:</span> <span class="kt">Thread</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/App%20State%20Handling"></a>
+                <a name="//apple_ref/swift/Section/App State Handling" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/App%20State%20Handling"></a>
+                  <h3 class="section-name"><span>App State Handling</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)shouldAutoStartOnEnterForeground"></a>
+                    <a name="//apple_ref/swift/Property/shouldAutoStartOnEnterForeground" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)shouldAutoStartOnEnterForeground">shouldAutoStartOnEnterForeground</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldAutoStartOnEnterForeground</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)isDrawOnDemandMode"></a>
+                    <a name="//apple_ref/swift/Property/isDrawOnDemandMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)isDrawOnDemandMode">isDrawOnDemandMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">isDrawOnDemandMode</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)frameOnDemandRendered"></a>
+                    <a name="//apple_ref/swift/Property/frameOnDemandRendered" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)frameOnDemandRendered">frameOnDemandRendered</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">frameOnDemandRendered</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Effect%20Player%20life%20circle"></a>
+                <a name="//apple_ref/swift/Section/Effect Player life circle" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Effect%20Player%20life%20circle"></a>
+                  <h3 class="section-name"><span>Effect Player life circle</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)isLoaded"></a>
+                    <a name="//apple_ref/swift/Property/isLoaded" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(py)isLoaded">isLoaded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">isLoaded</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(cm)initializeWithResourcePath:clientTokenString:logLevel:"></a>
+                    <a name="//apple_ref/swift/Method/initialize(resourcePath:clientTokenString:logLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(cm)initializeWithResourcePath:clientTokenString:logLevel:">initialize(resourcePath:<wbr>clientTokenString:<wbr>logLevel:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Intialize common banuba SDK resources. This must be called before <code>BanubaSdkManger</code> instance
+ creation. Counterpart <code>deinitialize</code> exists.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span>
+    <span class="nv">resourcePath</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+    <span class="nv">clientTokenString</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="nv">logLevel</span><span class="p">:</span> <span class="kt">BNBSeverityLevel</span> <span class="o">=</span> <span class="o">.</span><span class="n">info</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resourcePath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>paths to cutom resources folders</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientTokenString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>client token</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>logLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>log level</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(cm)deinitialize"></a>
+                    <a name="//apple_ref/swift/Method/deinitialize()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(cm)deinitialize">deinitialize()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Release common Banuba SDK resources</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">deinitialize</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(cm)enableDiagnosticsWithOutputFolder:"></a>
+                    <a name="//apple_ref/swift/Method/enableDiagnostics(outputFolder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(cm)enableDiagnosticsWithOutputFolder:">enableDiagnostics(outputFolder:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enables performance diagnostics. Don&rsquo;t call before initialize.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">enableDiagnostics</span><span class="p">(</span><span class="nv">outputFolder</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setDrawOnDemandMode:"></a>
+                    <a name="//apple_ref/swift/Method/setDrawOnDemandMode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setDrawOnDemandMode:">setDrawOnDemandMode(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setDrawOnDemandMode</span><span class="p">(</span><span class="n">_</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)requestFrameDraw"></a>
+                    <a name="//apple_ref/swift/Method/requestFrameDraw()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)requestFrameDraw">requestFrameDraw()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">requestFrameDraw</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setupWithConfiguration:"></a>
+                    <a name="//apple_ref/swift/Method/setup(configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)setupWithConfiguration:">setup(configuration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setup</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/EffectPlayerConfiguration.html">EffectPlayerConfiguration</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)destroy"></a>
+                    <a name="//apple_ref/swift/Method/destroy()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(im)destroy">destroy()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">destroy</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(cm)scaleBeforeProcessing:"></a>
+                    <a name="//apple_ref/swift/Method/scaleBeforeProcessing(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BanubaSdk@objc(cs)BanubaSdkManager(cm)scaleBeforeProcessing:">scaleBeforeProcessing(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>BNBEffectPlayer may crash on certain devices. So, we downscale the input image before processing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">scaleBeforeProcessing</span><span class="p">(</span><span class="n">_</span> <span class="nv">buffer</span><span class="p">:</span> <span class="kt">CVPixelBuffer</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">CVPixelBuffer</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Orientation%20Helper"></a>
+                <a name="//apple_ref/swift/Section/Orientation Helper" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Orientation%20Helper"></a>
+                  <h3 class="section-name"><span>Orientation Helper</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)pushWithCmBuffer:"></a>
+                    <a name="//apple_ref/swift/Method/push(cmBuffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)pushWithCmBuffer:">push(cmBuffer:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">push</span><span class="p">(</span><span class="nv">cmBuffer</span><span class="p">:</span> <span class="kt">CMSampleBuffer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)pushWithCvBuffer:"></a>
+                    <a name="//apple_ref/swift/Method/push(cvBuffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)pushWithCvBuffer:">push(cvBuffer:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">push</span><span class="p">(</span><span class="nv">cvBuffer</span><span class="p">:</span> <span class="kt">CVPixelBuffer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Effect%20Player%20Management"></a>
+                <a name="//apple_ref/swift/Section/Effect Player Management" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Effect%20Player%20Management"></a>
+                  <h3 class="section-name"><span>Effect Player Management</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)startEffectPlayer"></a>
+                    <a name="//apple_ref/swift/Method/startEffectPlayer()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)startEffectPlayer">startEffectPlayer()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startEffectPlayer</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)stopEffectPlayer"></a>
+                    <a name="//apple_ref/swift/Method/stopEffectPlayer()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)stopEffectPlayer">stopEffectPlayer()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopEffectPlayer</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)destroyEffectPlayer"></a>
+                    <a name="//apple_ref/swift/Method/destroyEffectPlayer()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)destroyEffectPlayer">destroyEffectPlayer()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">destroyEffectPlayer</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)startEditingImage:recognizerIterations:imageOrientation:requireMirroring:faceOrientation:fieldOfView:resetEffect:completion:"></a>
+                    <a name="//apple_ref/swift/Method/startEditingImage(_:recognizerIterations:imageOrientation:requireMirroring:faceOrientation:fieldOfView:resetEffect:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)startEditingImage:recognizerIterations:imageOrientation:requireMirroring:faceOrientation:fieldOfView:resetEffect:completion:">startEditingImage(_:<wbr>recognizerIterations:<wbr>imageOrientation:<wbr>requireMirroring:<wbr>faceOrientation:<wbr>fieldOfView:<wbr>resetEffect:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Image editing mode - renders effect on single frame prepared from image, applies effect on image in full resolution.</p>
+
+<p>Workflow to use editing:</p>
+
+<ul>
+<li>Configure effect player with correct render target and render size to match aspect ratio of edited image (could be done with setRenderTarget call), load needed effect.
+Pay attention that render size could be less than original image size (moreover, bigger resolution could cause performance issues), the only restriction is to preserve aspect ratio.</li>
+<li>Call startEditingImage. Completion block returns is any face found or not. From that moment image with applied effect is rendered on provided render target.</li>
+<li>Call captureEditedImage to get edited image with applied effect in fullsize resolution.</li>
+<li>Call stopEditingImage. After that moment user can switch to other render target and restore previous logic (push frames from camera), if needed.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startEditingImage</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">recognizerIterations</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">imageOrientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="o">=</span> <span class="o">.</span><span class="n">deg0</span><span class="p">,</span>
+    <span class="nv">requireMirroring</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">faceOrientation</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nv">fieldOfView</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nv">resetEffect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">CGRect</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)updateEditingFrameWithImage:imageOrientation:requireMirroring:faceOrientation:fieldOfView:completion:"></a>
+                    <a name="//apple_ref/swift/Method/updateEditingFrameWithImage(_:imageOrientation:requireMirroring:faceOrientation:fieldOfView:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)updateEditingFrameWithImage:imageOrientation:requireMirroring:faceOrientation:fieldOfView:completion:">updateEditingFrameWithImage(_:<wbr>imageOrientation:<wbr>requireMirroring:<wbr>faceOrientation:<wbr>fieldOfView:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Helper method to fast image update during editing mode, when image is changed without modifying facial features,
+so framedata from previous image will be correct for new one.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateEditingFrameWithImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+                                        <span class="nv">imageOrientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="o">=</span> <span class="o">.</span><span class="n">deg0</span><span class="p">,</span>
+                                        <span class="nv">requireMirroring</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                                        <span class="nv">faceOrientation</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                        <span class="nv">fieldOfView</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+                                        <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)captureEditedImageWithImageOrientation:resetEffect:completion:"></a>
+                    <a name="//apple_ref/swift/Method/captureEditedImage(imageOrientation:resetEffect:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)captureEditedImageWithImageOrientation:resetEffect:completion:">captureEditedImage(imageOrientation:<wbr>resetEffect:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">captureEditedImage</span><span class="p">(</span>
+    <span class="nv">imageOrientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="o">=</span> <span class="o">.</span><span class="n">deg0</span><span class="p">,</span>
+    <span class="nv">resetEffect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)stopEditingImageWithStartCameraInput:"></a>
+                    <a name="//apple_ref/swift/Method/stopEditingImage(startCameraInput:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)stopEditingImageWithStartCameraInput:">stopEditingImage(startCameraInput:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopEditingImage</span><span class="p">(</span><span class="nv">startCameraInput</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)makeCameraPhotoWithCameraSettings:flipFrontCamera:srcImageHandler:completion:"></a>
+                    <a name="//apple_ref/swift/Method/makeCameraPhoto(cameraSettings:flipFrontCamera:srcImageHandler:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)makeCameraPhotoWithCameraSettings:flipFrontCamera:srcImageHandler:completion:">makeCameraPhoto(cameraSettings:<wbr>flipFrontCamera:<wbr>srcImageHandler:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeCameraPhoto</span><span class="p">(</span><span class="nv">cameraSettings</span><span class="p">:</span> <span class="kt"><a href="../Classes/CameraPhotoSettings.html">CameraPhotoSettings</a></span><span class="p">,</span> <span class="nv">flipFrontCamera</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">srcImageHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">CVPixelBuffer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)processImageData:orientation:faceOrientation:fieldOfView:isMirrored:completion:"></a>
+                    <a name="//apple_ref/swift/Method/processImageData(_:orientation:faceOrientation:fieldOfView:isMirrored:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)processImageData:orientation:faceOrientation:fieldOfView:isMirrored:completion:">processImageData(_:<wbr>orientation:<wbr>faceOrientation:<wbr>fieldOfView:<wbr>isMirrored:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">processImageData</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">inputData</span><span class="p">:</span> <span class="kt">CVImageBuffer</span><span class="p">,</span>
+    <span class="nv">orientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="o">=</span> <span class="o">.</span><span class="n">deg0</span><span class="p">,</span>
+    <span class="nv">faceOrientation</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nv">fieldOfView</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nv">isMirrored</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)processImageData:orientation:fieldOfView:isMirrored:completion:"></a>
+                    <a name="//apple_ref/swift/Method/processImageData(_:orientation:fieldOfView:isMirrored:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)processImageData:orientation:fieldOfView:isMirrored:completion:">processImageData(_:<wbr>orientation:<wbr>fieldOfView:<wbr>isMirrored:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">processImageData</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">imputImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">orientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="o">=</span> <span class="o">.</span><span class="n">deg0</span><span class="p">,</span>
+    <span class="nv">fieldOfView</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nv">isMirrored</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)configureWatermark:"></a>
+                    <a name="//apple_ref/swift/Method/configureWatermark(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)configureWatermark:">configureWatermark(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configureWatermark</span><span class="p">(</span><span class="n">_</span> <span class="nv">watermarkInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/WatermarkInfo.html">WatermarkInfo</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)removeWatermark"></a>
+                    <a name="//apple_ref/swift/Method/removeWatermark()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)removeWatermark">removeWatermark()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeWatermark</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)startVideoProcessingWithWidth:height:orientation:resetEffect:"></a>
+                    <a name="//apple_ref/swift/Method/startVideoProcessing(width:height:orientation:resetEffect:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)startVideoProcessingWithWidth:height:orientation:resetEffect:">startVideoProcessing(width:<wbr>height:<wbr>orientation:<wbr>resetEffect:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startVideoProcessing</span><span class="p">(</span>
+    <span class="nv">width</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span>
+    <span class="nv">height</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span>
+    <span class="nv">orientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="o">=</span> <span class="o">.</span><span class="n">deg0</span><span class="p">,</span>
+    <span class="nv">resetEffect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)stopVideoProcessingWithResetEffect:"></a>
+                    <a name="//apple_ref/swift/Method/stopVideoProcessing(resetEffect:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)stopVideoProcessingWithResetEffect:">stopVideoProcessing(resetEffect:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopVideoProcessing</span><span class="p">(</span><span class="nv">resetEffect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)processVideoFrameFrom:to:timeNs:iterations:cameraOrientation:requireMirroring:faceOrientation:fieldOfView:"></a>
+                    <a name="//apple_ref/swift/Method/processVideoFrame(from:to:timeNs:iterations:cameraOrientation:requireMirroring:faceOrientation:fieldOfView:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)processVideoFrameFrom:to:timeNs:iterations:cameraOrientation:requireMirroring:faceOrientation:fieldOfView:">processVideoFrame(from:<wbr>to:<wbr>timeNs:<wbr>iterations:<wbr>cameraOrientation:<wbr>requireMirroring:<wbr>faceOrientation:<wbr>fieldOfView:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">processVideoFrame</span><span class="p">(</span>
+    <span class="nv">from</span><span class="p">:</span> <span class="kt">CVPixelBuffer</span><span class="p">,</span>
+    <span class="nv">to</span><span class="p">:</span> <span class="kt">CVPixelBuffer</span><span class="p">,</span>
+    <span class="nv">timeNs</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span>
+    <span class="nv">iterations</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">cameraOrientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="o">=</span> <span class="o">.</span><span class="n">deg0</span><span class="p">,</span>
+    <span class="nv">requireMirroring</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">faceOrientation</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nv">fieldOfView</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(py)photoCameraOrientation"></a>
+                    <a name="//apple_ref/swift/Property/photoCameraOrientation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(py)photoCameraOrientation">photoCameraOrientation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">photoCameraOrientation</span><span class="p">:</span> <span class="kt">BNBCameraOrientation</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(py)photoImageOrientation"></a>
+                    <a name="//apple_ref/swift/Property/photoImageOrientation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(py)photoImageOrientation">photoImageOrientation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">photoImageOrientation</span><span class="p">:</span> <span class="kt">UIImage</span><span class="o">.</span><span class="kt"><a href="../Enums/Orientation.html">Orientation</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)activateRenderTarget"></a>
+                    <a name="//apple_ref/swift/Method/activateRenderTarget()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)activateRenderTarget">activateRenderTarget()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">activateRenderTarget</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)surfaceChangedWithWidth:height:"></a>
+                    <a name="//apple_ref/swift/Method/surfaceChanged(width:height:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)surfaceChangedWithWidth:height:">surfaceChanged(width:<wbr>height:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">surfaceChanged</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Effect%20Player%20callbacks"></a>
+                <a name="//apple_ref/swift/Section/Effect Player callbacks" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Effect%20Player%20callbacks"></a>
+                  <h3 class="section-name"><span>Effect Player callbacks</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onCameraPoiChanged:y:"></a>
+                    <a name="//apple_ref/swift/Method/onCameraPoiChanged(_:y:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onCameraPoiChanged:y:">onCameraPoiChanged(_:<wbr>y:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onCameraPoiChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onFaceNumberChanged:"></a>
+                    <a name="//apple_ref/swift/Method/onFaceNumberChanged(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onFaceNumberChanged:">onFaceNumberChanged(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onFaceNumberChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">faceNumber</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onRecognizerFrameDurationChanged:averaged:"></a>
+                    <a name="//apple_ref/swift/Method/onRecognizerFrameDurationChanged(_:averaged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onRecognizerFrameDurationChanged:averaged:">onRecognizerFrameDurationChanged(_:<wbr>averaged:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onRecognizerFrameDurationChanged</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">instant</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span>
+    <span class="nv">averaged</span><span class="p">:</span> <span class="kt">Float</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onCameraFrameDurationChanged:averaged:"></a>
+                    <a name="//apple_ref/swift/Method/onCameraFrameDurationChanged(_:averaged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onCameraFrameDurationChanged:averaged:">onCameraFrameDurationChanged(_:<wbr>averaged:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onCameraFrameDurationChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">instant</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">averaged</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onRenderFrameDurationChanged:averaged:"></a>
+                    <a name="//apple_ref/swift/Method/onRenderFrameDurationChanged(_:averaged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@BanubaSdk@objc(cs)BanubaSdkManager(im)onRenderFrameDurationChanged:averaged:">onRenderFrameDurationChanged(_:<wbr>averaged:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onRenderFrameDurationChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">instant</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">averaged</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2026 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-06-25)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
