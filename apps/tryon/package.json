@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Customer-facing AR makeup try-on. Loads a brand's published looks from the AR Design public API; embeddable via iframe.",
   "scripts": {
-    "assets": "beautyos-copy-ar-engine-assets public/ar-engine",
+    "assets": "entelus-ar-assets public/ar-engine",
     "predev": "npm run assets",
     "prebuild": "npm run assets",
     "dev": "vite",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@beautyos/look-format": "*",
-    "@beautyos/tryon-engine": "*"
+    "@entelus/ar-sdk": "*"
   },
   "devDependencies": {
     "typescript": "~7.0.2",

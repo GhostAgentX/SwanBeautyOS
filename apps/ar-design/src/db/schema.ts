@@ -45,7 +45,7 @@ export const shades = pgTable(
     color: text("color").notNull(),
     finish: text("finish").notNull(),
     coverage: real("coverage").notNull(),
-    /** Exact Banuba finish when the neutral mapping isn't what the artist wants. */
+    /** Exact finish for the Banuba export format, when the neutral mapping isn't what the artist wants. */
     banubaFinish: text("banuba_finish"),
     position: integer("position").notNull().default(0),
     createdAt: createdAt(),

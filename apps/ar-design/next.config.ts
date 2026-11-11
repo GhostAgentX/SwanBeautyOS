@@ -1,6 +1,6 @@
 import type { NextConfig } from "next"
 
-// One .env at the repo root serves every app (BEAUTYOS_AR_LICENSE_KEY, DATABASE_URL, AI keys...).
+// One .env at the repo root serves every app (DATABASE_URL, storage and AI settings).
 try {
   process.loadEnvFile("../../.env")
 } catch {}
@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   // public API, which sets its own CDN cache headers.
   cacheComponents: false,
   // Workspace packages ship TypeScript source.
-  transpilePackages: ["@beautyos/look-format", "@beautyos/color-lab", "@beautyos/tryon-engine"],
+  transpilePackages: ["@beautyos/look-format", "@beautyos/color-lab", "@entelus/ar-sdk"],
   // Native/WASM server dependencies stay as Node requires.
   serverExternalPackages: ["@electric-sql/pglite", "sharp", "ffmpeg-static", "pg"],
   // Ship migrations and the ffmpeg binary with server functions.

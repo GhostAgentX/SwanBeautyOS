@@ -2,10 +2,9 @@ import { defineConfig } from "vite"
 import { fileURLToPath } from "node:url"
 
 export default defineConfig({
-  // One .env at the repo root: BEAUTYOS_AR_LICENSE_KEY, BEAUTYOS_API_URL, BEAUTYOS_BRAND.
+  // One .env at the repo root: BEAUTYOS_API_URL, BEAUTYOS_BRAND.
   envDir: fileURLToPath(new URL("../..", import.meta.url)),
   envPrefix: ["VITE_", "BEAUTYOS_"],
-  optimizeDeps: { exclude: ["@banuba/webar"] },
   server: {
     host: true,
     // In development the try-on talks to AR Design through this origin, so it also works behind

@@ -12,14 +12,13 @@
     "db:generate": "drizzle-kit generate",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "assets": "beautyos-copy-ar-engine-assets public/ar-engine",
+    "assets": "entelus-ar-assets public/ar-engine",
     "predev": "npm run assets",
     "prebuild": "npm run assets"
   },
   "dependencies": {
     "@beautyos/color-lab": "*",
     "@beautyos/look-format": "*",
-    "@beautyos/tryon-engine": "*",
     "@electric-sql/pglite": "^0.5.16",
     "@vercel/blob": "^2.9.0",
     "ai": "^7.0.169",
@@ -33,7 +32,8 @@
     "react-dom": "19.3.0",
     "server-only": "^0.0.1",
     "sharp": "^0.35.5",
-    "zod": "^4.6.7"
+    "zod": "^4.6.7",
+    "@entelus/ar-sdk": "*"
   },
   "devDependencies": {
     "@types/node": "^20",

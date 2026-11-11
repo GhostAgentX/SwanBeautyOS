@@ -1,6 +1,6 @@
 import "./style.css"
 import { previewColors, validateLook, type LookDocument, REGION_SPECS } from "@beautyos/look-format"
-import { TryOn, TryOnError, type TryOnInput } from "@beautyos/tryon-engine"
+import { ARError, EntelusAR, type ARInput } from "@entelus/ar-sdk"
 import { readConfig } from "./config"
 
 interface PublishedLook {
@@ -28,10 +28,10 @@ try {
 }
 if (config.embed) ui.topbar.hidden = true
 
-const tryOn = new TryOn(ui.stage)
+const tryOn = new EntelusAR(ui.stage)
 let looks: PublishedLook[] = []
 let active: PublishedLook | null = null
-let input: TryOnInput = { source: "camera" }
+let input: ARInput = { source: "camera" }
 const show = (el: HTMLElement, on: boolean) => (el.hidden = !on)
 const slug = (s: string) => s.toLowerCase().replace(/[^\w]+/g, "-").replace(/^-|-$/g, "")
 
@@ -66,7 +66,7 @@ function select(l: PublishedLook) {
 
 // ---------- engine ----------
 
-async function start(next: TryOnInput = input) {
+async function start(next: ARInput = input) {
   input = next
   if (tryOn.running) {
     await tryOn.setInput(next)
@@ -76,7 +76,7 @@ async function start(next: TryOnInput = input) {
   show(ui.error, false)
   show(ui.loading, true)
   try {
-    await tryOn.start({ clientToken: import.meta.env.BEAUTYOS_AR_LICENSE_KEY ?? "", assetsBaseUrl: "/ar-engine" }, (label, fraction) => {
+    await tryOn.start({ assetsBaseUrl: "/ar-engine" }, (label, fraction) => {
       ui.loadingLabel.textContent = label
       ui.loadingBar.style.width = `${Math.round(fraction * 100)}%`
     }, next)
@@ -86,7 +86,7 @@ async function start(next: TryOnInput = input) {
     console.error(e)
     await tryOn.destroy().catch(() => {})
     show(ui.loading, false)
-    ui.errorText.textContent = e instanceof TryOnError ? e.message : `Unexpected error: ${e instanceof Error ? e.message : String(e)}`
+    ui.errorText.textContent = e instanceof ARError ? e.message : `Unexpected error: ${e instanceof Error ? e.message : String(e)}`
     show(ui.error, true)
   }
 }

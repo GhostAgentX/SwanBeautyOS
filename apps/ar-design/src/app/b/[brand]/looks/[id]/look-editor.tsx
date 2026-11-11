@@ -47,7 +47,6 @@ export function LookEditor(props: {
   catalog: CatalogShade[]
   media: Media[]
   initialModelId?: string
-  clientToken: string
 }) {
   const { brand, lookId, catalog, media } = props
   const router = useRouter()
@@ -141,7 +140,7 @@ export function LookEditor(props: {
 
       <div className="editor">
         <div className="stack-sm">
-          <ArStage look={doc} intensity={intensity} clientToken={props.clientToken} models={models} initialModelId={props.initialModelId} onSaveRender={saveRender} fileBase={doc.name.toLowerCase().replace(/\W+/g, "-")} />
+          <ArStage look={doc} intensity={intensity} models={models} initialModelId={props.initialModelId} onSaveRender={saveRender} fileBase={doc.name.toLowerCase().replace(/\W+/g, "-")} />
           <label className="field" style={{ maxWidth: 360 }}>
             <span className="row" style={{ justifyContent: "space-between" }}>Preview intensity <span className="muted">{Math.round(intensity * 100)}%</span></span>
             <input type="range" min={0} max={100} value={Math.round(intensity * 100)} onChange={(e) => setIntensity(Number(e.target.value) / 100)} />
@@ -309,7 +308,7 @@ function RegionEditor({ region, layers, catalog, open, setOpen, onAdd, onChange,
                   </label>
                   {l.shade && <p className="hint" style={{ margin: 0 }}>Linked to {l.shade.productName} · {l.shade.name} ({l.shade.sku}). Changing the color unlinks it.</p>}
                   <details className="advanced">
-                    <summary>Advanced: engine finish</summary>
+                    <summary>Advanced: finish for Banuba export</summary>
                     <select className="select" value={l.material.overrides?.banuba?.finish ?? ""} onChange={(e) => onChange(i, (x) => ({ ...x, material: { ...x.material, overrides: e.target.value ? { ...x.material.overrides, banuba: { finish: e.target.value } } : undefined } }))}>
                       <option value="">Automatic (from {pretty(l.material.finish)})</option>
                       {BANUBA_FINISHES[region].map((f) => <option key={f} value={f}>{pretty(f)}</option>)}

@@ -1,0 +1,28 @@
+{
+  "name": "@entelus/ar-sdk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Entelus AR SDK: real-time face tracking and makeup rendering for Beauty OS looks in the browser. No vendor SDK or license key.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "bin": {
+    "entelus-ar-assets": "./scripts/assets.mjs"
+  },
+  "scripts": {
+    "fetch-test-assets": "node scripts/fetch-test-assets.mjs",
+    "pretest": "node scripts/fetch-test-assets.mjs --quiet",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@beautyos/look-format": "*",
+    "@mediapipe/tasks-vision": "1.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

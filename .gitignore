@@ -27,5 +27,7 @@ Pods/
 next-env.d.ts
 .data/
 *.tsbuildinfo
-# AR engine SDK assets copied into app public dirs at build time
+# Entelus AR SDK runtime (wasm + models) installed into app public dirs at build time
 apps/*/public/ar-engine/
+packages/entelus-ar-sdk/test-assets/
+packages/entelus-ar-sdk/models/

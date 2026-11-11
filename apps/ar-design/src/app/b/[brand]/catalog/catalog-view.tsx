@@ -78,7 +78,7 @@ function ProductCard({ brand, product }: { brand: string; product: Product }) {
             })}>Add shade</button>
           </div>
           <details className="advanced">
-            <summary>Advanced: exact engine finish</summary>
+            <summary>Advanced: finish for Banuba export</summary>
             <select className="select" style={{ maxWidth: 320 }} value={form.banubaFinish} onChange={(e) => setForm({ ...form, banubaFinish: e.target.value })}>
               <option value="">Automatic</option>
               {BANUBA_FINISHES[product.region].map((f) => <option key={f} value={f}>{pretty(f)}</option>)}
@@ -95,7 +95,7 @@ function ProductCard({ brand, product }: { brand: string; product: Product }) {
                 <td><span className="swatch" style={{ background: s.color, cursor: "default" }} /></td>
                 <td><strong>{s.name}</strong></td>
                 <td className="mono">{s.sku}</td>
-                <td className="soft">{pretty(s.finish)}{s.banubaFinish ? <span className="hint"> · engine {pretty(s.banubaFinish)}</span> : null}</td>
+                <td className="soft">{pretty(s.finish)}{s.banubaFinish ? <span className="hint"> · Banuba export: {pretty(s.banubaFinish)}</span> : null}</td>
                 <td className="mono soft">{s.color}</td>
                 <td style={{ textAlign: "right" }}><button className="btn btn-ghost btn-icon btn-sm" aria-label={`Delete ${s.name}`} onClick={() => confirm(`Delete ${s.name} (${s.sku})?`) && start(async () => { const r = await deleteShadeAction(brand, s.id); if (!r.ok) toast(r.error, "error") })}><Icon name="trash" size={15} /></button></td>
               </tr>

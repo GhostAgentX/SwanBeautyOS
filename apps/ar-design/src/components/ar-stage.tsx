@@ -1,8 +1,8 @@
 "use client"
-// Live AR preview: renders a Beauty OS look with the AR engine on the camera, a synthetic model
+// Live AR preview: renders a Beauty OS look with the Entelus AR engine on the camera, a synthetic model
 // photo, or an uploaded photo/video. Captures full-resolution stills and video.
 import type { LookDocument } from "@beautyos/look-format"
-import { TryOn, TryOnError, type TryOnInput } from "@beautyos/tryon-engine"
+import { ARError, EntelusAR, type ARInput } from "@entelus/ar-sdk"
 import { useEffect, useRef, useState } from "react"
 import { Icon } from "./icons"
 import { saveBlob, useToast } from "./ui"
@@ -19,7 +19,6 @@ type Source = { kind: "camera" } | { kind: "model"; model: ModelOption } | { kin
 export function ArStage({
   look,
   intensity = 1,
-  clientToken,
   models = [],
   initialModelId,
   onSaveRender,
@@ -27,7 +26,6 @@ export function ArStage({
 }: {
   look: LookDocument | null
   intensity?: number
-  clientToken: string
   models?: ModelOption[]
   initialModelId?: string
   /** When set, shows "Save to models" for renders on a synthetic model. */
@@ -35,7 +33,7 @@ export function ArStage({
   fileBase?: string
 }) {
   const container = useRef<HTMLDivElement>(null)
-  const engine = useRef<TryOn | null>(null)
+  const engine = useRef<EntelusAR | null>(null)
   const fileInput = useRef<HTMLInputElement>(null)
   const toast = useToast()
   const initialModel = models.find((m) => m.id === initialModelId)
@@ -48,7 +46,7 @@ export function ArStage({
   const [pickModel, setPickModel] = useState(false)
 
   useEffect(() => {
-    engine.current = new TryOn(container.current!)
+    engine.current = new EntelusAR(container.current!)
     engine.current.onAssetFailure((m) => toast(m, "error"))
     return () => void engine.current?.destroy()
   }, [toast])
@@ -57,7 +55,7 @@ export function ArStage({
   useEffect(() => engine.current?.setIntensity(intensity), [intensity])
   useEffect(() => engine.current?.setComparing(comparing), [comparing])
 
-  const toInput = async (s: Source): Promise<TryOnInput> => {
+  const toInput = async (s: Source): Promise<ARInput> => {
     if (s.kind === "camera") return { source: "camera" }
     if (s.kind === "file") return s.file.type.startsWith("video/") ? { source: "video", file: s.file } : { source: "image", file: s.file }
     const res = await fetch(s.model.url)
@@ -75,13 +73,13 @@ export function ArStage({
       setPhase("loading")
       e.setLook(look)
       e.setIntensity(intensity)
-      await e.start({ clientToken, assetsBaseUrl: "/ar-engine" }, (label, value) => setProgress({ label, value }), await toInput(s))
+      await e.start({ assetsBaseUrl: "/ar-engine" }, (label, value) => setProgress({ label, value }), await toInput(s))
       setPhase("ready")
     } catch (err) {
       console.error(err)
       await e.destroy().catch(() => {})
-      engine.current = new TryOn(container.current!)
-      setError(err instanceof TryOnError ? err.message : `Couldn't start the preview: ${err instanceof Error ? err.message : String(err)}`)
+      engine.current = new EntelusAR(container.current!)
+      setError(err instanceof ARError ? err.message : `Couldn't start the preview: ${err instanceof Error ? err.message : String(err)}`)
       setPhase("error")
     }
   }
@@ -162,7 +160,7 @@ export function ArStage({
             {phase === "idle" && (
               <div>
                 <h2>Live preview</h2>
-                <p>Renders this look with the Beauty OS AR engine{source.kind === "camera" ? " on your camera. Video stays on this device." : ` on ${sourceLabel}.`}</p>
+                <p>Renders this look with the Entelus AR engine{source.kind === "camera" ? " on your camera. Video stays on this device." : ` on ${sourceLabel}.`}</p>
                 <button className="btn btn-primary" onClick={() => start()}>
                   <Icon name={source.kind === "camera" ? "camera" : "eye"} /> Start preview
                 </button>
