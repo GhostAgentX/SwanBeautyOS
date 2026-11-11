@@ -207,7 +207,7 @@ export interface ProcessedVideo {
   steps: string[]
 }
 
-/** Transcodes to H.264/AAC MP4 (Banuba's recommended video format), capped at 1080p, with fast start. */
+/** Transcodes to H.264/AAC MP4 (the AR engine's recommended video format), capped at 1080p, with fast start. */
 export async function processVideo(input: Uint8Array): Promise<ProcessedVideo> {
   const bin = await ffmpegPath()
   return withTemp(async (dir) => {

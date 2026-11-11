@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Customer-facing AR makeup try-on. Loads a brand's published looks from the AR Design public API; embeddable via iframe.",
   "scripts": {
-    "assets": "beautyos-copy-banuba-assets public/banuba",
+    "assets": "beautyos-copy-ar-engine-assets public/ar-engine",
     "predev": "npm run assets",
     "prebuild": "npm run assets",
     "dev": "vite",

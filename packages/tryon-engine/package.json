@@ -2,13 +2,13 @@
   "name": "@beautyos/tryon-engine",
   "version": "0.1.0",
   "private": true,
-  "description": "Banuba Face AR player for Beauty OS looks. Shared by AR Design (studio preview) and the customer try-on.",
+  "description": "Beauty OS AR engine: renders look documents live. Shared by AR Design (studio preview) and the customer try-on.",
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
   "bin": {
-    "beautyos-copy-banuba-assets": "./scripts/copy-banuba-assets.mjs"
+    "beautyos-copy-ar-engine-assets": "./scripts/copy-ar-engine-assets.mjs"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"

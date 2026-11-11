@@ -36,10 +36,10 @@ export async function seed(db: DB) {
   const bySku = new Map<string, { id: string; name: string; productName: string; banubaFinish?: string }>()
   for (const p of CATALOG) {
     const product = await repo.createProduct(db, brand.id, { name: p.name, region: p.region })
-    for (const [i, [name, hex, finish, banuba]] of p.shades.entries()) {
+    for (const [i, [name, hex, finish, engineFinish]] of p.shades.entries()) {
       const sku = `${p.code}-${String(i + 1).padStart(3, "0")}`
-      const s = await repo.addShade(db, brand.id, product.id, { name, sku, color: hex, finish, banubaFinish: banuba ?? null })
-      bySku.set(sku, { id: s.id, name, productName: p.name, banubaFinish: banuba })
+      const s = await repo.addShade(db, brand.id, product.id, { name, sku, color: hex, finish, banubaFinish: engineFinish ?? null })
+      bySku.set(sku, { id: s.id, name, productName: p.name, banubaFinish: engineFinish })
     }
   }
   for (const l of LOOKS) {

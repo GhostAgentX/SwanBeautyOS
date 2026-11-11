@@ -27,5 +27,5 @@ Pods/
 next-env.d.ts
 .data/
 *.tsbuildinfo
-# Banuba SDK assets copied into app public dirs at build time
-apps/*/public/banuba/
+# AR engine SDK assets copied into app public dirs at build time
+apps/*/public/ar-engine/

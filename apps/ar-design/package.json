@@ -12,7 +12,7 @@
     "db:generate": "drizzle-kit generate",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "assets": "beautyos-copy-banuba-assets public/banuba",
+    "assets": "beautyos-copy-ar-engine-assets public/ar-engine",
     "predev": "npm run assets",
     "prebuild": "npm run assets"
   },

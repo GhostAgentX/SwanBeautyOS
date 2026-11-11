@@ -1,11 +1,11 @@
-// Banuba WebAR player lifecycle for Beauty OS looks.
-// Docs: https://docs.banuba.com/far-sdk/tutorials/development/installation/web
+// Beauty OS AR engine: renders look documents live on camera, photo or video input.
+// Built on a third-party Face AR Web SDK (see docs/architecture.md, "Third-party software").
 import { toBanubaPrefab, type LookDocument } from "@beautyos/look-format"
 import { strToU8, zipSync } from "fflate"
-import type { Player as BanubaPlayer, Webcam as BanubaWebcam } from "@banuba/webar"
+import type { Player as EnginePlayer, Webcam as EngineWebcam } from "@banuba/webar"
 
 /** Makeup prefabs resolve segmentation dependencies at runtime, so load all five. */
-export const BANUBA_MODULES = ["face_tracker", "makeup", "lips", "eyes", "skin"] as const
+export const ENGINE_MODULES = ["face_tracker", "makeup", "lips", "eyes", "skin"] as const
 
 export type ProgressFn = (label: string, fraction: number) => void
 
@@ -31,16 +31,16 @@ export interface SnapshotOptions {
 
 export interface TryOnOptions {
   clientToken: string
-  /** URL folder holding BanubaSDK.{data,wasm,simd.wasm} and modules/*.zip (see copy-banuba-assets). */
+  /** URL folder holding BanubaSDK.{data,wasm,simd.wasm} and modules/*.zip (see copy-ar-engine-assets). */
   assetsBaseUrl: string
 }
 
-/** `Player#_effectManager` is private in the typings but is Banuba's documented Web API for runtime prefab changes. */
+/** `Player#_effectManager` is private in the typings but is the SDK's documented Web API for runtime prefab changes. */
 type EffectManager = { reloadConfig(config: string): void }
 
 export class TryOn {
-  private player: BanubaPlayer | null = null
-  private webcam: BanubaWebcam | null = null
+  private player: EnginePlayer | null = null
+  private webcam: EngineWebcam | null = null
   private input: TryOnInput = { source: "camera" }
   private recorder: { stop(): Promise<Blob>; start(): void } | null = null
   private sdk: typeof import("@banuba/webar") | null = null
@@ -60,7 +60,7 @@ export class TryOn {
   async start({ clientToken, assetsBaseUrl }: TryOnOptions, onProgress: ProgressFn = () => {}, input: TryOnInput = { source: "camera" }) {
     this.input = input
     if (!clientToken) {
-      throw new TryOnError("token", "Missing Banuba client token (BANUBA_CLIENT_TOKEN).")
+      throw new TryOnError("token", "Missing AR license key (BEAUTYOS_AR_LICENSE_KEY).")
     }
     // Load the SDK lazily so server-rendered pages never evaluate it.
     const sdk = (this.sdk ??= await import("@banuba/webar"))
@@ -70,7 +70,7 @@ export class TryOn {
     const base = assetsBaseUrl.replace(/\/$/, "")
 
     onProgress(input.source === "camera" ? "Starting camera" : "Reading file", 0.02)
-    const webcamPromise: Promise<BanubaWebcam | null> =
+    const webcamPromise: Promise<EngineWebcam | null> =
       input.source === "camera"
         ? new sdk.Webcam().start().catch((e: unknown) => {
             throw new TryOnError("camera", `Camera unavailable: ${e instanceof Error ? e.message : String(e)}`)
@@ -78,7 +78,7 @@ export class TryOn {
         : Promise.resolve(null)
 
     onProgress("Loading AR engine", 0.05)
-    let player: BanubaPlayer
+    let player: EnginePlayer
     try {
       player = await sdk.Player.create({
         clientToken,
@@ -93,13 +93,13 @@ export class TryOn {
       console.error("Player.create failed", e)
       // Engine-side failures surface as an opaque WebAssembly.Exception; the usual cause is the license check.
       const detail = e instanceof Error ? ` (${e.message})` : ""
-      throw new TryOnError("sdk", `The AR engine refused to start${detail}. Check that the Banuba client token is correct, not expired, and valid for this domain.`)
+      throw new TryOnError("sdk", `The AR engine refused to start${detail}. Check that BEAUTYOS_AR_LICENSE_KEY is correct, not expired, and valid for this domain.`)
     }
     this.player = player
 
-    const progress = BANUBA_MODULES.map(() => 0)
+    const progress = ENGINE_MODULES.map(() => 0)
     const modules = await Promise.all(
-      BANUBA_MODULES.map((name, i) =>
+      ENGINE_MODULES.map((name, i) =>
         sdk.Module.preload(`${base}/modules/${name}.zip`, {
           onProgress: ({ total, transferred }) => {
             progress[i] = total ? transferred / total : 0

@@ -241,7 +241,7 @@ export async function generateModel(db: DB, brandId: string, specInput: ModelSpe
   return { asset, headroomAddedPx: framed.addedPx }
 }
 
-/** Saves a browser-rendered "model wearing look" frame (Banuba applied to a synthetic model photo). */
+/** Saves a browser-rendered "model wearing look" frame (the AR engine applied to a synthetic model photo). */
 export async function saveModelRender(db: DB, brandId: string, input: { bytes: Uint8Array; modelAssetId: string; lookId?: string; lookName: string }) {
   const model = await repo.getAsset(db, brandId, input.modelAssetId)
   const base = model.provenance

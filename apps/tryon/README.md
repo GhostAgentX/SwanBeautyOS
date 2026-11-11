@@ -1,12 +1,12 @@
 # Beauty OS · Try-on
 
-Customer-facing AR makeup try-on. Loads a brand's **published** looks from AR Design's public API and renders them with `@beautyos/tryon-engine` (Banuba Face AR Web SDK).
+Customer-facing AR makeup try-on. Loads a brand's **published** looks from AR Design's public API and renders them with the Beauty OS AR engine (`@beautyos/tryon-engine`).
 
 - Camera, or an uploaded photo or video
 - Look picker, intensity, hold-to-compare
 - Full-resolution PNG/JPEG capture and video recording
 - Shades in the look, with SKUs
-- Look download (Beauty OS JSON, Banuba effect zip)
+- Look download (Beauty OS JSON, or an effect zip for the AR SDK)
 
 ```bash
 npm run dev -w @beautyos/tryon     # http://localhost:5173

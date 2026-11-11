@@ -28,7 +28,7 @@ export default async function LookPage({ params, searchParams }: PageProps<"/b/[
       catalog={catalog}
       media={media}
       initialModelId={typeof model === "string" ? model : undefined}
-      clientToken={process.env.BANUBA_CLIENT_TOKEN ?? ""}
+      clientToken={process.env.BEAUTYOS_AR_LICENSE_KEY ?? ""}
     />
   )
 }

@@ -25,7 +25,7 @@ Beauty OS is a multi-brand AR beauty platform, operated by Entelus. Creative tea
 | Path | Package | Role |
 |---|---|---|
 | `packages/look-format` | `@beautyos/look-format` | The **Beauty OS Look Document**: platform-neutral schema (regions, neutral finishes, materials, overlays, asset refs), validation, and **platform adapters** (Banuba first). |
-| `packages/tryon-engine` | `@beautyos/tryon-engine` | Banuba WebAR player for look documents: camera/photo/video input, live edits, asset packaging into effects, snapshots, recording. Used by both apps. |
+| `packages/tryon-engine` | `@beautyos/tryon-engine` | The Beauty OS **AR engine**: renders look documents: camera/photo/video input, live edits, asset packaging into effects, snapshots, recording. Used by both apps. |
 | `packages/color-lab` | `@beautyos/color-lab` | Digital Lab core: color science (sRGB/Lab/OKLab/CMYK, CIEDE2000), color libraries (ASE/CSV, licensed Pantone imports), swatch/chip analysis, skin-tone reasoning, look formulation, rule-based prompt parsing. |
 | `apps/ar-design` | `@beautyos/ar-design` | The production studio (Next.js 16, Postgres via Drizzle). |
 | `apps/tryon` | `@beautyos/tryon` | Customer try-on (Vite, framework-free). |
@@ -50,7 +50,7 @@ Registries pick the first **available** module in registration order, and the UI
 
 ## Data model (Postgres)
 
-`brands` (tenants) → `products` → `shades` (SKU, color, neutral finish, optional exact Banuba finish) · `looks` (working `draft` + status) → `look_versions` (immutable published snapshots; customers only ever see these) · `assets` (original + processed delivery file, both hashed; thumbnails, palette, processing steps, **provenance** for AI-generated media) · `color_libraries`.
+`brands` (tenants) → `products` → `shades` (SKU, color, neutral finish, optional exact engine finish) · `looks` (working `draft` + status) → `look_versions` (immutable published snapshots; customers only ever see these) · `assets` (original + processed delivery file, both hashed; thumbnails, palette, processing steps, **provenance** for AI-generated media) · `color_libraries`.
 
 Migrations live in `apps/ar-design/drizzle/`. Add a migration with `npm run db:generate -w @beautyos/ar-design` after changing `src/db/schema.ts`; never edit a released migration.
 
@@ -66,14 +66,14 @@ Migrations live in `apps/ar-design/drizzle/`. Add a migration with `npm run db:g
 ## Security notes
 
 - AR Design has **no sign-in yet** (team accounts were deferred). Don't expose it publicly until auth is added; put it behind Vercel Deployment Protection or an SSO proxy meanwhile. The public API is read-only.
-- The Banuba Web token is necessarily visible to browsers; restrict it to your domains with Banuba.
+- The AR license key (`BEAUTYOS_AR_LICENSE_KEY`) is necessarily visible to browsers on the web; have the SDK vendor restrict it to your domains.
 - Storage keys are validated against path traversal; uploads are sniffed by content; remote look documents are validated before rendering.
 
 ## Running locally
 
 ```bash
 npm install
-cp .env.example .env              # add BANUBA_CLIENT_TOKEN
+cp .env.example .env              # add BEAUTYOS_AR_LICENSE_KEY
 npm run db:seed                   # Swan Beauty catalog + looks (local PGlite)
 npm run dev:design                # AR Design  → http://localhost:3000
 npm run dev:tryon                 # Try-on     → http://localhost:5173
@@ -82,4 +82,8 @@ npm test                          # all packages
 
 ## Deploying (Vercel)
 
-Two projects from this repo: `apps/ar-design` (Next.js) and `apps/tryon` (Vite static). AR Design needs `DATABASE_URL` (Marketplace Postgres such as Neon), a connected Blob store (`BLOB_READ_WRITE_TOKEN`), `BANUBA_CLIENT_TOKEN`, and optionally the AI Gateway model ids. Run `npm run db:migrate` against the production database before the first deploy. The try-on needs `BANUBA_CLIENT_TOKEN`, `BEAUTYOS_API_URL` (AR Design's URL) and `BEAUTYOS_BRAND`.
+Two projects from this repo: `apps/ar-design` (Next.js) and `apps/tryon` (Vite static). AR Design needs `DATABASE_URL` (Marketplace Postgres such as Neon), a connected Blob store (`BLOB_READ_WRITE_TOKEN`), `BEAUTYOS_AR_LICENSE_KEY`, and optionally the AI Gateway model ids. Run `npm run db:migrate` against the production database before the first deploy. The try-on needs `BEAUTYOS_AR_LICENSE_KEY`, `BEAUTYOS_API_URL` (AR Design's URL) and `BEAUTYOS_BRAND`.
+
+## Third-party software
+
+The AR engine (`packages/tryon-engine`) is built on the **Banuba Face AR Web SDK** (`@banuba/webar`), a commercial SDK used under your Banuba license (`BEAUTYOS_AR_LICENSE_KEY`). The `banuba` and `banuba-effect` export targets write Banuba's effect format, so looks load in Banuba's SDKs on Web, iOS, Android, Flutter and React Native. The Claude Code skills in `.claude/skills/` come from Banuba's [ai-skills](https://github.com/Banuba/ai-skills) repository (Apache-2.0).

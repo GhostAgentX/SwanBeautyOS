@@ -309,7 +309,7 @@ function RegionEditor({ region, layers, catalog, open, setOpen, onAdd, onChange,
                   </label>
                   {l.shade && <p className="hint" style={{ margin: 0 }}>Linked to {l.shade.productName} · {l.shade.name} ({l.shade.sku}). Changing the color unlinks it.</p>}
                   <details className="advanced">
-                    <summary>Advanced: Banuba finish</summary>
+                    <summary>Advanced: engine finish</summary>
                     <select className="select" value={l.material.overrides?.banuba?.finish ?? ""} onChange={(e) => onChange(i, (x) => ({ ...x, material: { ...x.material, overrides: e.target.value ? { ...x.material.overrides, banuba: { finish: e.target.value } } : undefined } }))}>
                       <option value="">Automatic (from {pretty(l.material.finish)})</option>
                       {BANUBA_FINISHES[region].map((f) => <option key={f} value={f}>{pretty(f)}</option>)}

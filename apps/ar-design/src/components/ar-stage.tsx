@@ -1,5 +1,5 @@
 "use client"
-// Live AR preview: renders a Beauty OS look with the Banuba engine on the camera, a synthetic model
+// Live AR preview: renders a Beauty OS look with the AR engine on the camera, a synthetic model
 // photo, or an uploaded photo/video. Captures full-resolution stills and video.
 import type { LookDocument } from "@beautyos/look-format"
 import { TryOn, TryOnError, type TryOnInput } from "@beautyos/tryon-engine"
@@ -75,7 +75,7 @@ export function ArStage({
       setPhase("loading")
       e.setLook(look)
       e.setIntensity(intensity)
-      await e.start({ clientToken, assetsBaseUrl: "/banuba" }, (label, value) => setProgress({ label, value }), await toInput(s))
+      await e.start({ clientToken, assetsBaseUrl: "/ar-engine" }, (label, value) => setProgress({ label, value }), await toInput(s))
       setPhase("ready")
     } catch (err) {
       console.error(err)
@@ -162,7 +162,7 @@ export function ArStage({
             {phase === "idle" && (
               <div>
                 <h2>Live preview</h2>
-                <p>Renders this look with the Banuba engine{source.kind === "camera" ? " on your camera. Video stays on this device." : ` on ${sourceLabel}.`}</p>
+                <p>Renders this look with the Beauty OS AR engine{source.kind === "camera" ? " on your camera. Video stays on this device." : ` on ${sourceLabel}.`}</p>
                 <button className="btn btn-primary" onClick={() => start()}>
                   <Icon name={source.kind === "camera" ? "camera" : "eye"} /> Start preview
                 </button>

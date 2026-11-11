@@ -1,6 +1,6 @@
 import type { NextConfig } from "next"
 
-// One .env at the repo root serves every app (BANUBA_CLIENT_TOKEN, DATABASE_URL, AI keys...).
+// One .env at the repo root serves every app (BEAUTYOS_AR_LICENSE_KEY, DATABASE_URL, AI keys...).
 try {
   process.loadEnvFile("../../.env")
 } catch {}

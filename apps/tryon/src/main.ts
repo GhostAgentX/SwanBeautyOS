@@ -16,7 +16,7 @@ const ui = {
   loading: $("loading"), loadingLabel: $("loading-label"), loadingBar: $("loading-bar"), error: $("error"), errorText: $("error-text"), retry: $<HTMLButtonElement>("retry"),
   actions: $("stage-actions"), compare: $<HTMLButtonElement>("compare"), snapPng: $<HTMLButtonElement>("snap-png"), snapJpg: $<HTMLButtonElement>("snap-jpg"), record: $<HTMLButtonElement>("record"),
   file: $<HTMLInputElement>("file"), looks: $("looks"), looksStatus: $("looks-status"), detail: $("look-detail"), lookName: $("look-name"), lookDesc: $("look-desc"),
-  intensity: $("intensity"), shades: $("shades"), dlLook: $<HTMLButtonElement>("dl-look"), dlBanuba: $<HTMLButtonElement>("dl-banuba"),
+  intensity: $("intensity"), shades: $("shades"), dlLook: $<HTMLButtonElement>("dl-look"), dlEffect: $<HTMLButtonElement>("dl-effect"),
 }
 
 let config: ReturnType<typeof readConfig>
@@ -76,7 +76,7 @@ async function start(next: TryOnInput = input) {
   show(ui.error, false)
   show(ui.loading, true)
   try {
-    await tryOn.start({ clientToken: import.meta.env.BANUBA_CLIENT_TOKEN ?? "", assetsBaseUrl: "/banuba" }, (label, fraction) => {
+    await tryOn.start({ clientToken: import.meta.env.BEAUTYOS_AR_LICENSE_KEY ?? "", assetsBaseUrl: "/ar-engine" }, (label, fraction) => {
       ui.loadingLabel.textContent = label
       ui.loadingBar.style.width = `${Math.round(fraction * 100)}%`
     }, next)
@@ -150,7 +150,7 @@ const download = async (target: "beautyos" | "banuba-effect") => {
   save(await res.blob(), `${active.slug}.${target === "beautyos" ? "beautyos-look.json" : "banuba-effect.zip"}`)
 }
 ui.dlLook.addEventListener("click", () => download("beautyos"))
-ui.dlBanuba.addEventListener("click", () => download("banuba-effect"))
+ui.dlEffect.addEventListener("click", () => download("banuba-effect"))
 
 window.addEventListener("pagehide", () => void tryOn.destroy())
 
