@@ -21,7 +21,7 @@ const ui = {
 
 let config: ReturnType<typeof readConfig>
 try {
-  config = readConfig(location.search, import.meta.env)
+  config = readConfig(location.search, import.meta.env, location.origin)
 } catch (e) {
   document.body.textContent = e instanceof Error ? e.message : String(e)
   throw e
