@@ -21,7 +21,8 @@ const ui = {
 
 let config: ReturnType<typeof readConfig>
 try {
-  config = readConfig(location.search, import.meta.env, location.origin)
+  // Default API: this page's own location (works at a domain root or under a preview/proxy sub-path).
+  config = readConfig(location.search, import.meta.env, new URL(".", location.href).href)
 } catch (e) {
   document.body.textContent = e instanceof Error ? e.message : String(e)
   throw e
@@ -47,13 +48,26 @@ async function loadLooks() {
     ui.brandName.textContent = data.brand.name
     document.title = `${data.brand.name} · Virtual Try-On`
     // Only render documents that validate: never trust remote data blindly.
-    looks = data.looks.filter((l) => validateLook(l.look).ok)
+    looks = data.looks.filter((l) => validateLook(l.look).ok).map((l) => ({ ...l, look: withAbsoluteMedia(l.look) }))
     ui.looksStatus.textContent = looks.length ? "" : "No looks are published yet."
     renderLooks()
     const initial = looks.find((l) => l.slug === config.look) ?? looks[0]
     if (initial) select(initial)
   } catch (e) {
     ui.looksStatus.textContent = `Couldn't load looks: ${e instanceof Error ? e.message : String(e)}`
+  }
+}
+
+/** Look media are stored as AR Design paths (/api/files/...); resolve them against the API origin. */
+function withAbsoluteMedia(look: LookDocument): LookDocument {
+  const abs = (url: string) => (/^[a-z]+:/i.test(url) ? url : `${config.api}${url.startsWith("/") ? "" : "/"}${url}`)
+  return {
+    ...look,
+    overlays: look.overlays.map((o) => ({
+      ...o,
+      ...("asset" in o && o.asset ? { asset: { ...o.asset, url: abs(o.asset.url) } } : {}),
+      ...(o.kind === "face_video" && o.alpha ? { alpha: { ...o.alpha, url: abs(o.alpha.url) } } : {}),
+    })) as LookDocument["overlays"],
   }
 }
 
@@ -76,7 +90,7 @@ async function start(next: ARInput = input) {
   show(ui.error, false)
   show(ui.loading, true)
   try {
-    await tryOn.start({ assetsBaseUrl: "/ar-engine" }, (label, fraction) => {
+    await tryOn.start({ assetsBaseUrl: new URL("ar-engine", document.baseURI).href }, (label, fraction) => {
       ui.loadingLabel.textContent = label
       ui.loadingBar.style.width = `${Math.round(fraction * 100)}%`
     }, next)

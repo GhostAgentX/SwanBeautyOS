@@ -2,6 +2,8 @@ import { defineConfig } from "vite"
 import { fileURLToPath } from "node:url"
 
 export default defineConfig({
+  // Relative asset URLs: the built try-on works at a domain root, in a sub-folder, or behind a preview proxy.
+  base: "./",
   // One .env at the repo root: BEAUTYOS_API_URL, BEAUTYOS_BRAND.
   envDir: fileURLToPath(new URL("../..", import.meta.url)),
   envPrefix: ["VITE_", "BEAUTYOS_"],
